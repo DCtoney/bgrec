@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "outDir": "compiledTS",
+        "removeComments": true,
+        "rootDir": "src",
+        "strict": true,
+        "strictFunctionTypes": true,
+        "target": "esnext"
+    },
+    "include": ["src/**/*"]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "bgrec",
+  "version": "1.0.0",
+  "description": "Get out of there, fast.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && npx webpack --config webpack.config.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.cci.drexel.edu/fds23/bgrec/bgrec.git"
+  },
+  "author": "BGRec Team",
+  "license": "MIT",
+  "devDependencies": {
+    "path": "^0.12.7"
+  }
+}
