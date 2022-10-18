@@ -1,3 +1,8 @@
+/// This is the file that TypeScript uses for it's config. I'm a little worried because a lot of the options are 
+// preference and vary depending on how you like to code, but in general we can hopefully all agree on these.
+// Hovering over these in VSCode (or whatever IDE you use) should give you documentation on what it is. If you
+// are unsure, just ask.
+
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,

@@ -1,10 +1,18 @@
 {
+  "comments": {
+    "file description": [
+      "This is the file used by Node.js for running scripts like compiling TypeScript or Webpack.",
+      "Using npx, we don't need to have TypeScript or Webpack even installed on our machines, node will run it remotely.",
+      "Use npm run start or npm start to compile TypeScript and Webpack."
+    ]
+  },
+
   "name": "bgrec",
   "version": "1.0.0",
   "description": "Get out of there, fast.",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc && npx webpack --config webpack.config.cjs"
+    "start": "npx tsc && npx webpack --config webpack.config.cjs && rmdir compiledTS"
   },
   "repository": {
     "type": "git",
