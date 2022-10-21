@@ -7,7 +7,7 @@ const path = require("path");
 
 module.exports = {
     /** The entry point. The main JavaScript file that imports others and acts as the primary script. */
-    entry: "./compiledTS/main.js",
+    entry: "./src/main.ts",
 
     /** The production mode. can be either "production" or "development". */
     mode: "production",
@@ -33,7 +33,9 @@ module.exports = {
     resolve: {
         modules: [
             path.join(__dirname, 'node_modules')
-        ]
+        ],
+        /** The file extensions to recognize */
+        extensions: [".ts", ".js"]
     },
 
     optimization: {
@@ -43,6 +45,16 @@ module.exports = {
          * This is already true by default but I've left it in to make everyone aware of the option.
          */
         minimize: false
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                use: "ts-loader",
+                exclude: /node_modules/
+            }
+        ]
     },
 
     /** 

@@ -1,4 +1,4 @@
-/// This is the file that TypeScript uses for it's config. I'm a little worried because a lot of the options are 
+// This is the file that TypeScript uses for it's config. I'm a little worried because a lot of the options are 
 // preference and vary depending on how you like to code, but in general we can hopefully all agree on these.
 // Hovering over these in VSCode (or whatever IDE you use) should give you documentation on what it is. If you
 // are unsure, just ask.
@@ -13,12 +13,13 @@
         "noImplicitOverride": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
-        "outDir": "compiledTS",
         "removeComments": true,
-        "rootDir": "src",
         "strict": true,
         "strictFunctionTypes": true,
-        "target": "esnext"
+        "target": "esnext",
+        "rootDir": "src",
+        "types": ["node"]
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "src/node_modules/**/*"],
+    "exclude": ["node_modules/*"]
 }
