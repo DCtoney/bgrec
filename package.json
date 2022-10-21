@@ -11,7 +11,7 @@
   "description": "Get out of there, fast.",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc && npx webpack --config webpack.config.cjs && rmdir compiledTS"
+    "start": "npx webpack --config webpack.config.cjs"
   },
   "repository": {
     "type": "git",
