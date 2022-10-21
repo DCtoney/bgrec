@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Comic+Neue);
+
+:root {
+  --pink1: #ffd1dc;
+  --pink2: #f1a5c6;
+  --pink3: #dd6e9f;
+  --pink4:  #bb4176;
+  --pink5: #942153;
+  
+  --orange1: #ffbbae;
+  --orange2: #ff937f;
+  --orange3: #dd634d;
+  
+  --purple1: #d19be0;
+  --purple2: #a15db4;
+  --purple3: #7e3692;
+
+  --white: #faf0ff;
+  --grey1: #baacbd;
+  --grey2: #726673;
+  --shadow: #72667359;
+  --grey3: #332e33;
+  --black: #1f1c1f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Neue';
+  font-size: 12px;
+  background-color: var(--pink1);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Amatic SC';
+}
+
+h3 {
+  font-size: 22px;
+}
+h5 {
+  font-family: "Comic Neue";
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--pink1);
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li h5 {
+  display: block;
+  color: var(--grey3);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+nav ul li h5:hover:not(.active) {
+  background-color: #fff0f5;
+}
+
+.active {
+  color: var(--white);
+  background-color: var(--pink3);
+  box-shadow: 1.5px 0px 10px var(--shadow);
+}
+
+.banner {
+  overflow: auto;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: var(--purple1);
+  box-shadow: inset 0 0 5px 2px var(--shadow);
+}
+
+.bannerText {
+  padding-top: 12px;
+  padding-left: 30%;
+  padding-right: 5%;
+  float: left;
+  font-size: 100px;
+}
+
+.bannerIcon {
+  float: left;
+  max-height: 150px;
+  max-width: 150px;
+  margin: auto;
+  display: block;
+}
+
+.cardHolder {
+  overflow: auto;
+  background-color: var(--pink1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card {
+  transition: all .2s ease-in-out;
+  margin: .5%;
+  background-color: var(--pink1);
+  box-shadow: 0 0 2px 2px var(--shadow);
+  float: left;
+  width: 19%;
+  height: 65
+  0px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: var(--purple1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: thin solid var(--purple2);
+}
+
+.card h3 {
+  padding: 5px;
+  text-align: center;
+}
+
+.card p {
+  padding: 10px;
+}
+
+/*use for prices*/
+.card h5 {
+  text-align:center;
+  padding: 5px;
+}
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--grey3);
+  width: 100%;
+  background-color: var(--purple1);
+  text-align: center;
+}
