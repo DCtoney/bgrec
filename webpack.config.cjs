@@ -35,7 +35,12 @@ module.exports = {
             path.join(__dirname, 'node_modules')
         ],
         /** The file extensions to recognize */
-        extensions: [".ts", ".js"]
+        extensions: [".ts", ".js"],
+        fallback: {
+            string_decoder: false,
+            stream: false,
+            url: false
+        }
     },
 
     optimization: {
@@ -53,13 +58,23 @@ module.exports = {
                 test: /\.ts$/,
                 use: "ts-loader",
                 exclude: /node_modules/
+            },
+            {
+                test: /\.m?js/,
+                resolve: {
+                    fullySpecified: false
+                }
             }
         ]
     },
+
+    experiments: {
+        topLevelAwait: true
+    }
 
     /** 
      * Indicates whether or not to print debug statements in the console when building. Comment this line out if you're getting
      * weird webpack errors and need a console log.
      */
-    stats: "none"
+    // stats: "none"
 }
