@@ -1,0 +1,2 @@
+I am a software engineering major with a particular interest in low level systems as well as hardware integration.
+I am decently experienced in a variety of technologies including C, Java, Python, and web technologies like HTML/CSS and a bit of Javascript.
