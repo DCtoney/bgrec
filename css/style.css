@@ -9,7 +9,7 @@ nav {
   height: 10vh;
 }
 nav ul {
-  background-color: #fff;
+  background-color: #000;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -19,6 +19,8 @@ nav li {
   float: left;
 }
 nav li a {
+  display: block;
+  color: #fff;
   text-align: center;
   text-decoration: none;
   text-decoration: underline;
