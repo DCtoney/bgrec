@@ -1,20 +1,4 @@
-//list features of less https://lesscss.org/
-
-//format for color declarations and any other variables
-$bgcolor: #fff;
-$maincolor: #fff;
-$white: #fff;
-$lightGrey: #fff;
-$darkGrey: #fff;
-$black: #fff;
-
-// font formatting for local files, these are then referenced with font-family: "Lato";
-@font-face {
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: normal;
-	src: local("Lato Regular"), url("./panda/Lato-Regular.ttf") format("truetype");
-  }
+@import "./shared/variables.scss";
 
 //selectors for nav bar
 nav {
