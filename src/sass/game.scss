@@ -1,0 +1,72 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+
+main {
+    width: fit-content;
+    align-items: center;
+
+    margin: auto;
+    margin-top: 8vw;
+    width: 80%;
+
+    .information-box {
+        background-color: white;
+        box-shadow: 0 0 5px 3px rgba($darkGrey, .5);
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vh;
+
+        // The "Forage" title above the search bar
+        >h1 {
+            font-family: "Hintown";
+            font-size: 8vw;
+            margin: 0;
+            color: $darkerGreen;
+            display: inline-flex
+        }
+
+        >h2 {
+            font-family: "Segoe UI";
+            font-size: 4vw;
+            margin: 0;
+            color: $lightGreen;
+        }
+
+        >h3 {
+            font-family: "Segoe UI";
+            font-size: 2vw;
+            margin: 0;
+            color: $lightGreen;
+            text-align: left;
+        }
+        >#body {
+            font-family: "Segoe UI";
+            font-size: 2vw;
+            margin: 0; 
+        }
+
+        >h3 , #body{
+            float: inline;
+        }
+
+        >p {
+            font-family: "Segoe UI";
+            font-size: 1vw;
+            margin: 0;
+        }
+
+        >table {
+            font-family: "Segoe UI";
+            font-size: 2vw;
+            margin: 0;
+            color: $lightGreen;
+            text-align: left;
+        }
+    }
+}
+
+body {
+    background-color: $darkerGreen;
+    background-size: cover;
+    background-position: center;
+}

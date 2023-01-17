@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link href="../sass/search.scss" rel="stylesheet" type="text/css">
+
+    <!-- Favicon for the website-->
+    <link rel="icon" type="image/x-icon" href="/assets/images/ForageFavicon.png">
+
+    <!-- Preconnect for Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script defer src="../typescript/global/Global.ts" type="module"></script>
+    <script defer src="../typescript/Search.ts" type="module"></script>
+
+    <!-- Tab title -->
+    <title>Forage</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="./search.html">Home</a>
+        <a href="./about.html">About</a>
+        <div id="random">Random</div>
+        <div>
+            <input type="text" placeholder="Basic Search" />
+            <img src="/assets/images/search.png" id="nav-search" />
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <h1>Forage</h1>
+        <div id="search-wrapper">
+            <input type="text" id="search" placeholder="Get out of there, FAST!" autocomplete="off" />
+            <img src="/assets/images/search.png" />
+        </div>
+        <div>
+            <button id="filters">Filters</button>
+            <button style="word-wrap: nowrap;">
+                Playtime
+                <div>
+                    <div style="display: flex; margin: 1vw">Min:&nbsp;<div><input style="width: 100%;" min="1"
+                                type="number" placeholder="Any" id="min-playtime" /></div>
+                    </div>
+                    <div style="display: flex; margin: 1vw; margin-top: 0px;">Max:&nbsp;<div><input style="width: 100%;"
+                                max="100" type="number" placeholder="Any" id="max-playtime" /></div>
+                    </div>
+                </div>
+            </button>
+            <button>
+                Player Count
+                <div>
+                    <div style="display: flex; margin: 1vw">Minimum:&nbsp;<div><input style="width: 100%;" min="1"
+                                type="number" placeholder="Any" id="min-player-count" /></div>
+                    </div>
+                    <div style="display: flex; margin: 1vw; margin-top: 0px;">Maximum:&nbsp;<div><input
+                                style="width: 100%;" type="number" placeholder="Any" id="max-player-count" /></div>
+                    </div>
+                </div>
+            </button>
+            <button>
+                Age Range
+                <div id="age-button">
+                    <div style="display: flex; margin: 1vw">Min:&nbsp;<div><input style="width: 100%;" min="1"
+                                type="number" placeholder="Any" id="min-age" /></div>
+                    </div>
+                </div>
+            </button>
+            <button>
+                User Rating
+                <div>
+                    <div style="display: flex; margin: 1vw;">
+                        <img src="/assets/images/empty_star.png" data-star />
+                        <img src="/assets/images/empty_star.png" data-star />
+                        <img src="/assets/images/empty_star.png" data-star />
+                        <img src="/assets/images/empty_star.png" data-star />
+                        <img src="/assets/images/empty_star.png" data-star />
+                    </div>
+                    <input checked type="checkbox" class="and-above"
+                        style="margin-right: 0.5vw; accent-color: #008547; color: white;" id="and-above" />And above
+                </div>
+            </button>
+            <button>
+                Global Rank
+                <div>
+                    <div style="display: flex; margin: 1vw">Minimum:&nbsp;<div><input style="width: 100%;" min="1"
+                                type="number" placeholder="Any" id="min-rank" /></div>
+                    </div>
+                    <div style="display: flex; margin: 1vw; margin-top: 0px;">Maximum:&nbsp;<div><input
+                                style="width: 100%;" min="1" type="number" placeholder="Any" id="max-rank" /></div>
+                    </div>
+                </div>
+            </button>
+            <button>
+                Complexity
+                <div>
+                    <div style="display: flex; margin: 1vw">Min:&nbsp;<div><input style="width: 100%;" min="1"
+                                type="number" placeholder="Any" id="min-complexity" /></div>
+                    </div>
+                    <div style="display: flex; margin: 1vw; margin-top: 0px;">Max:&nbsp;<div><input style="width: 100%;"
+                                max="100" type="number" placeholder="Any" id="max-complexity" /></div>
+                    </div>
+                </div>
+            </button>
+            <button>
+                Year Published
+                <div>
+                    <div style="display: flex; margin: 1vw">Minimum:&nbsp;<div><input style="width: 100%;" min="1900"
+                                max="2022" type="number" placeholder="Any" id="min-year-published" /></div>
+                    </div>
+                    <div style="display: flex; margin: 1vw; margin-top: 0px;">Maximum:&nbsp;<div><input
+                                style="width: 100%;" min="1900" max="2022" type="number" placeholder="Any"
+                                id="max-year-published" /></div>
+                    </div>
+                </div>
+            </button>
+            <button id="genre-button">
+                Genre & Category
+                <div style="width: 100%">
+                    <div id="genre">
+                        <div>Abstract Strategy</div>
+                        <div>Action / Dexterity</div>
+                        <div>Adventure</div>
+                        <div>Age of Reason</div>
+                        <div>American War</div>
+                        <div>American West</div>
+                        <div>Ancient</div>
+                        <div>Animals</div>
+                        <div>Arabian</div>
+                        <div>Aviation / Flight</div>
+                        <div>Bluffing</div>
+                        <div>Book</div>
+                        <div>Card Game</div>
+                        <div>Children's Game</div>
+                        <div>City Building</div>
+                        <div>Civil War</div>
+                        <div>Civilization</div>
+                        <div>Collectibles</div>
+                        <div>Comic Book / Strip</div>
+                        <div>Deduction</div>
+                        <div>Dice</div>
+                        <div>Economic</div>
+                        <div>Educational</div>
+                        <div>Electronic</div>
+                        <div>Environmental</div>
+                        <div>Expansion</div>
+                        <div>Exploration</div>
+                        <div>Fan Expansion</div>
+                        <div>Fantasy</div>
+                        <div>Farming</div>
+                        <div>Fighting</div>
+                        <div>Game System</div>
+                        <div>Horror</div>
+                        <div>Humor</div>
+                        <div>Industry / Factory</div>
+                        <div>Korean War</div>
+                        <div>Mafia</div>
+                        <div>Math</div>
+                        <div>Mature / Adult</div>
+                        <div>Maze</div>
+                        <div>Medical</div>
+                        <div>Medieval</div>
+                        <div>Memory</div>
+                        <div>Miniatures</div>
+                        <div>Modern Warfare</div>
+                        <div>Movies / TV</div>
+                        <div>Murder/Mystery</div>
+                        <div>Music</div>
+                        <div>Mythology</div>
+                        <div>Napoleonic</div>
+                        <div>Nautical</div>
+                        <div>Negotiation</div>
+                        <div>Novel-based</div>
+                        <div>Number</div>
+                        <div>Party Game</div>
+                        <div>Pike and Shot</div>
+                        <div>Pirates</div>
+                        <div>Political</div>
+                        <div>Post-Napoleonic</div>
+                        <div>Prehistoric</div>
+                        <div>Print & Play</div>
+                        <div>Puzzle</div>
+                        <div>Racing</div>
+                        <div>Real-time</div>
+                        <div>Religious</div>
+                        <div>Renaissance</div>
+                        <div>Science Fiction</div>
+                        <div>Space Exploration</div>
+                        <div>Spies/Secret Agents</div>
+                        <div>Sports</div>
+                        <div>Territory Building</div>
+                        <div>Trains</div>
+                        <div>Transportation</div>
+                        <div>Travel</div>
+                        <div>Trivia</div>
+                        <div>Video Game Theme</div>
+                        <div>Vietnam War</div>
+                        <div>Wargame</div>
+                        <div>Word Game</div>
+                        <div>World War I</div>
+                        <div>World War II</div>
+                        <div>Zombies</div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>

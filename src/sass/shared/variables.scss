@@ -1,0 +1,64 @@
+//format for color declarations and any other variables
+$lighterGreen: #92B99E;
+$lightGreen: #649A75;
+$midGreen: #438055;
+$darkGreen: #37533f;
+$darkerGreen: #2e4b37;
+
+$lighterRed: #EFBCC3;
+$lightRed: #C6818B;
+$midRed: #A55661;
+$darkRed: #843641;
+$darkerRed: #6A1C26;
+
+$white: #F5F2F2;
+$lightGrey: #A8A4A4;
+$midGrey: #5B5656;
+$darkGrey: #393333;
+$black: #241F1F;
+
+$shadow: #241F1f33;	
+
+// font formatting for local files, these are then referenced with font-family: "Lato";
+@font-face {
+	font-family: "Hintown";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Hintown DEMO"), url("/assets/fonts/Hintown\ DEMO.otf") format("OpenType");
+}
+
+@font-face {
+	font-family: "CrimsonText";
+	font-style: normal;
+	font-weight: normal;
+	src: local("CrimsonText-Regular"), url("/assets/fonts/CrimsonText-regular.ttf") format("TrueType");
+}
+
+
+@font-face {
+	font-family: "CrimsonText";
+	font-style: Italic;
+	font-weight: normal;
+	src: local("CrimsonText-Italic"), url("/assets/fonts/CrimsonText-Italic.ttf") format("TrueType");
+}
+
+@font-face {
+	font-family: "CrimsonText";
+	font-style: normal;
+	font-weight: bold;
+	src: local("CrimsonText-Bold"), url("/assets/fonts/CrimsonText-Bold.ttf") format("TrueType");
+}
+
+@font-face {
+	font-family: "CrimsonText";
+	font-style: italic;
+	font-weight: bold;
+	src: local("CrimsonText-BoldItalic"), url("/assets/fonts/CrimsonText-BoldItalic.ttf") format("TrueType");
+}
+
+@font-face {
+	font-family: "Nature";
+	font-style: Italic;
+	font-weight: normal;
+	src: local("Nature"), url("/assets/fonts/Nature.ttf") format("TrueType");
+}

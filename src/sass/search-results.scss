@@ -1,0 +1,76 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+
+body {
+    background-color: $darkerGreen;
+}
+
+main {
+    margin: auto;
+    margin-top: 8vw;
+    font-family: "CrimsonText";
+    width: 75%;
+
+    .container {
+        font-size: 1vw;
+        margin: 2vh;
+
+        background-color: $white;
+        box-shadow: 0 0 5px 3px $shadow;
+        cursor: pointer;
+
+        .title {
+            padding-top: .5em;
+            padding-bottom: .25em;
+            
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 3em;
+            box-shadow: 0px 7px 5px $shadow;
+            background-color: $lighterGreen;
+        }
+
+        .content {
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-bottom: 2vh;
+            
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+            justify-content: space-between;
+            
+            img {
+                box-shadow: 1px 3px 5px $shadow;
+                height: 100%;
+            }
+            
+            .info {
+                padding-left: 1vw;
+                padding-right: 1vw;
+                padding-bottom: .5vh;
+                
+                flex-grow: 10;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                .description {
+                    text-align: center;
+                    font-size: 2.5em;
+                }
+
+                .attributes {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 2vw;
+
+                    p {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

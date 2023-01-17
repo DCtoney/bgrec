@@ -1,0 +1,51 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+// Main content
+main {
+    $gap: 4vw;
+    display: flex;
+    gap: $gap;
+    width: 90%;
+    height: fit-content;
+    margin-top: 9vw;
+
+    // People cards
+    > div {
+        width: calc(25% - (3/4 * $gap));
+        text-align: center;
+
+        // Name
+        > h1 {  
+            font-family: "Segoe UI";
+            font-size: 2vw;
+        }
+
+        // Description
+        > p {
+            font-family: "Segoe UI";
+            font-size: 1vw;
+        }
+
+        // Avatar
+        > img {
+            width: 50%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+        }
+    }
+}

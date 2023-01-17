@@ -1,0 +1,24 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+/*.banner {
+   overflow: auto;
+   width: 100%;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   background-color: var(--purple1);
+   box-shadow: inset 0 0 5px 2px var(--shadow);
+ }*/
+
+.banner {
+   overflow: auto;
+   width: 100%;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   background-color: var(--purple1);
+   box-shadow: inset 0 0 5px 2px var(--shadow);
+ }
+
+//this can be used as a mixin for common properties of all headers
+body {
+   background-color: $darkGrey;
+}

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "removeComments": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "esnext",
+        "rootDir": "../src/typescript",
+        "outDir": "../public/scripts"
+    },
+    "include": ["../src/typescript/**/*"],
+    "exclude": ["../node_modules/*"]
+}

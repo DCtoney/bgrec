@@ -1,0 +1,17 @@
+{
+	"name": "forage",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -p ./config/tsconfig.json && vite build --config config/vite.config.ts"
+	},
+	"devDependencies": {
+		"@types/jquery": "^3.5.14",
+		"@types/node": "^18.11.17",
+		"sass": "^1.57.0",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0"
+	}
+}
