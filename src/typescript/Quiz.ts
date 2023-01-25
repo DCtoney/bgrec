@@ -22,6 +22,18 @@ export default class Quiz {
             });
         });
     }
+
+    public selectResult(): Result {
+        let bestResult = this.results[0];
+
+        this.results.forEach(result => {
+            if(result.value > bestResult.value) {
+                bestResult = result;
+            }
+        });
+
+        return bestResult;
+    }
 }
 
 export interface Answer {
@@ -31,6 +43,7 @@ export interface Answer {
 
 export interface Question {
     text: string;
+    image: string;
     answers: Answer[];
 }
 

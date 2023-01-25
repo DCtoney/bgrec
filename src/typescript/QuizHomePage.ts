@@ -13,19 +13,22 @@ import Quiz, {quizzes} from "./Quiz";
  * 
  * The created div containing name, author, time to complete, and description for the quiz
  */
-function displayQuizMetadata(quiz: Quiz): HTMLElement {
+export default function displayQuizMetadata(quiz: Quiz): HTMLElement {
    let quizData = document.createElement("div");
    quizData.classList.add("quizData");
    
    let title = document.createElement("h2");
+   title.classList.add("quiz-title");
    title.innerText = quiz.title;
    quizData.appendChild(title);
 
    let info = document.createElement("h3");
-   info.innerText = `${quiz.author} - ${quiz.time} minutes`;
+   info.classList.add("quiz-data");
+   info.innerText = `${quiz.author} - ${quiz.time} minutes - ${quiz.questions.length} Questions`;
    quizData.appendChild(info);
    
    let description = document.createElement("p");
+   description.classList.add("quiz-description");
    description.innerText = quiz.info;
    quizData.appendChild(description);
 
@@ -45,12 +48,13 @@ function displayQuizMetadata(quiz: Quiz): HTMLElement {
  * 
  * The created div containing all quiz data. It will be clickable to lead to the actual quiz page.
  */
-function createQuizDisplay(quiz: Quiz): HTMLElement {
+export function createQuizDisplay(quiz: Quiz): HTMLElement {
    let quizCard = document.createElement("div");
+   quizCard.classList.add("quiz-card");
    
    let pic = document.createElement("img");
-   quizCard.classList.add("quizCard");
    pic.src = quiz.image;
+   pic.classList.add("quiz-thumbnail");
    quizCard.appendChild(pic);
 
    quizCard.appendChild(displayQuizMetadata(quiz));
