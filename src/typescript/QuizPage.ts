@@ -125,3 +125,4 @@ button.onclick = function() {
    sessionStorage.setItem("result", quiz.selectResult());
    window.location.href = "./results.html"
 };
+main.appendChild(button);
