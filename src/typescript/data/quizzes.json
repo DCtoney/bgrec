@@ -40,6 +40,39 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "text": "Which of these is your favorite Childhood game",
+                    "answers": [
+                        {
+                            "text": "Monopoly",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Risk",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Battleship",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Sorry",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        }
+                    ]
                 }
             ],
             "results": [

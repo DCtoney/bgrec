@@ -108,7 +108,7 @@ function displayQuestion(container: HTMLElement, question: Question, questionNum
 }
 
 let main = document.getElementById("quizzes")!;
-let quiz = JSON.parse(sessionStorage.getItem("quiz")!);
+let quiz = JSON.parse(sessionStorage.getItem("quiz")!) as Quiz;
 
 displayQuizMetadata(quiz);
 
@@ -122,7 +122,9 @@ quiz.questions.forEach(question => {
 let button = document.createElement("button");
 button.innerHTML = "See results!";
 button.onclick = function() {
-   sessionStorage.setItem("result", quiz.selectResult());
+   sessionStorage.removeItem("result");
+   sessionStorage.setItem("result", JSON.stringify(quiz.selectResult()));
    window.location.href = "./results.html"
 };
+
 main.appendChild(button);
