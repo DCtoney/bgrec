@@ -4,7 +4,9 @@
         {
             "title": "Find your Mechanic",
             "author": "Trent Russ",
+            "image": "../../assets/images/trent.jpg",
             "time": 10,
+            "info": "A quiz to help users determine what kind of game playstyle they will enjoy!",
             "questions": [
                 {
                     "text": "Which of these is your favorite Childhood game",
@@ -21,13 +23,11 @@
             ],
             "results": [
                 {
-                    "name": "Auction",
+                    "value": 0,
+                    "text": "Auction",
                     "info": "These games can be intensely cut-throat pitting players directly against eachother placing bids on resources.",
                     "suggestions": [
-                        {
-                            "title": "Modern Art",
-                            "id": 118
-                        }
+                        ["Modern Art", 118]  
                     ]
                 }
             ]

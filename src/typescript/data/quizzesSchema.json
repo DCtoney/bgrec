@@ -9,8 +9,12 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["title", "author", "time", "questions", "results"],
+        "required": ["image", "title", "author", "time", "info", "questions", "results"],
         "properties": {
+          "image": {
+            "description": "the image to represent the quiz on the home page",
+            "type": "string"
+          },
           "title": {
             "description": "Name of the Quiz",
             "type": "string"
@@ -22,6 +26,10 @@
           "time": {
             "description": "The estimated time to complete the quiz in minutes",
             "type": "integer"
+          },
+          "info": {
+            "description": "The informational text to help the user select a quiz",
+            "type": "string"
           },
           "questions": {
             "description": "All questions as their own objects",
@@ -84,8 +92,12 @@
             "items": {
               "description": "An object containing all of the results data",
               "type": "object",
-              "required": ["name"],
+              "required": ["value", "text"],
               "properties": {
+                "value": {
+                  "description": "The weight of the result, highest number is the result recieved",
+                  "type": "number"
+                },
                 "text": {
                   "description": "The displayed text result that the user recieves.",
                   "type": "string"
@@ -101,18 +113,18 @@
                   "uniqueItems": true,
                   "items": {
                     "description": "The information for the game suggestion",
-                    "type": "object",
+                    "type": "array",
                     "requires": ["title", "id"],
-                    "properties": {
-                      "title": {
+                    "prefixItems": [
+                      {
                         "description": "Game Name",
                         "type": "string"
                       },
-                      "id": {
+                      {
                         "description": "game's ID in our data, used for linking to the game",
                         "type": "integer"
                       }
-                    }
+                    ]
                   }
                 }           
               }

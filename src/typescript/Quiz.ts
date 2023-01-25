@@ -1,54 +1,42 @@
+import quizData from './data/quizzes.json';
+
+export const quizzes = quizData.quizzes as Quiz[];
 /**
- * The `Quiz` class.
+ * The `Quiz` class. defines quiz fields for access
  */
 export default class Quiz {
+    public image: string;
+    public title: string;
+    public author: string;
+    public time: number;
+    public info: string;
+    public questions: Question[];
+    public results: Result[];
 
-    private questions = new Map<Question, Answer | null>();
-
-    /**
-     * Adds questions to this quiz.
-     * 
-     * **Parameters**
-     * ```ts
-     * let questions: Question[]
-     * ```
-     * - The questions to add
-     * 
-     * **Example**
-     * ```ts
-     * let quiz = new Quiz();
-     * 
-     * let question: Question = {
-     *     text: "What is your favorite color?",
-     *     choices: [
-     *         {
-     *             text: "Green",
-     *             weightCategory: "color",
-     *             weightValue: 10
-     *         }
-     *     ]
-     * };
-     * 
-     * quiz.addQuestion(question);
-     * ```
-     * 
-     */
-    public addQuestion(...questions: Question[]): void {
-        questions.forEach(question => this.questions.set(question, null));
-    }
-
-    public answer(question: Question, answer: Answer): void {
-       this.questions.set(question, answer);
+    public processAnswer(answer: Answer) {
+        answer.impacts.forEach(impact => {
+            this.results.forEach(result => {
+                if (result.text === impact[0]) {
+                    result.value += impact[1];
+                }
+            });
+        });
     }
 }
 
 export interface Answer {
     text: string;
-    weightCategory: string;
-    weightValue: number;   
+    impacts: [string, number][];
 }
 
 export interface Question {
     text: string;
-    choices: Answer[];
+    answers: Answer[];
+}
+
+export interface Result {
+    value: number;
+    text: string;
+    info: string;
+    suggestions: [string, number][];
 }
