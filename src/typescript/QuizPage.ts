@@ -24,6 +24,8 @@ function displayAnswer(container: HTMLElement, answer: Answer): void {
 
    let radio = document.createElement("input");
    radio.type = "radio";
+   radio.name = `answer`;
+   
 
    answerDiv.appendChild(radio);
    answerDiv.appendChild(answerText);
