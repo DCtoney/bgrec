@@ -125,7 +125,7 @@ button.innerHTML = "See results!";
 button.onclick = function() {
    sessionStorage.removeItem("result");
    sessionStorage.setItem("result", JSON.stringify(quiz.selectResult()));
-   window.location.href = "./results.html"
+   window.location.href = "./quiz-results.html"
 };
 
 main.appendChild(button);
