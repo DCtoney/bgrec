@@ -2,6 +2,91 @@
     "$schema": "./quizzesSchema.json",
     "quizzes": [
         {
+            "title": "Find your Mechanic",
+            "author": "Trent Russ",
+            "image": "../../assets/images/trent.jpg",
+            "time": 10,
+            "info": "A quiz to help users determine what kind of game playstyle they will enjoy!",
+            "questions": [
+                {
+                    "text": "Which of these is your favorite Childhood game",
+                    "answers": [
+                        {
+                            "text": "Monopoly",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Risk",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Battleship",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Sorry",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Which of these is your favorite Childhood game",
+                    "answers": [
+                        {
+                            "text": "Monopoly",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Risk",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Battleship",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        },
+                        {
+                            "text": "Sorry",
+                            "impacts":[
+                                ["Auction", 3],
+                                ["Deck Building", -2]
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "results": [
+                {
+                    "value": 0,
+                    "text": "Auction",
+                    "info": "These games can be intensely cut-throat pitting players directly against eachother placing bids on resources.",
+                    "suggestions": [
+                        ["Modern Art", 118]  
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Find your age range",
             "author": "Brendan Hoag",
             "image": "../../assets/images/esrb-logo_reduced.png",
