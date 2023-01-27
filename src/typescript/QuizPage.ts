@@ -22,6 +22,11 @@ function displayAnswer(container: HTMLElement, answer: Answer): void {
    let answerText = document.createElement("p");
    answerText.classList.add("answer-text");
    answerText.innerText = answer.text;
+
+   let radio = document.createElement("input");
+   radio.type = "radio";
+   
+   answerDiv.appendChild(radio);
    answerDiv.appendChild(answerText);
 
    answerDiv.onclick = function () {
@@ -123,7 +128,6 @@ quiz.questions.forEach(question => {
 let button = document.createElement("button");
 button.innerHTML = "See results!";
 button.onclick = function() {
-   sessionStorage.removeItem("result");
    sessionStorage.setItem("result", JSON.stringify(quiz.selectResult()));
    window.location.href = "./quiz-results.html"
 };

@@ -49,6 +49,7 @@ export default function displayQuizMetadata(quiz: Quiz): HTMLElement {
  * The created div containing all quiz data. It will be clickable to lead to the actual quiz page.
  */
 export function createQuizDisplay(quiz: Quiz): HTMLElement {
+   
    let quizCard = document.createElement("div");
    quizCard.classList.add("quiz-card");
    
@@ -59,7 +60,7 @@ export function createQuizDisplay(quiz: Quiz): HTMLElement {
 
    quizCard.appendChild(displayQuizMetadata(quiz));
    quizCard.onclick = function() {
-      sessionStorage.removeItem("quiz");
+      console.log("passed quiz: " + quiz.title +  " to storage");  
       sessionStorage.setItem("quiz", JSON.stringify(quiz));
       window.location.href = "./quiz.html"
    };
