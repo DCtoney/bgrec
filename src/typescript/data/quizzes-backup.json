@@ -246,6 +246,82 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Find your Genre",
+            "author": "Dante C. Barbosa-Toney",
+            "image": "../../assets/images/trent.jpg",
+            "time": 5,
+            "info": "A quiz to help users determine what genres may interest you!",
+            "questions": [
+                {
+                    "text": "Which of these is your favorite Movie",
+                    "answers": [
+                        {
+                            "text": "Lord of the Rings",
+                            "impacts":[
+                                ["Adventure", 3],
+                                ["Pirates", -2]
+                            ]
+                        },
+                        {
+                            "text": "Star Wars",
+                            "impacts":[
+                                ["Science Fiction", 2],
+                                ["Pirates", -2]
+                            ]
+                        },
+                        {
+                            "text": "Cars",
+                            "impacts":[
+                                ["Racing", 4],
+                                ["Adventure", -2]
+                            ]
+                        },
+                        {
+                            "text": "Pirates of the Caribbean",
+                            "impacts":[
+                                ["Pirates", 5],
+                                ["Science Fiction", -2]
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "results": [
+                {
+                    "value": 2,
+                    "text": "Science Fiction",
+                    "info": "SPAAAACE.",
+                    "suggestions": [
+                        ["Terraforming Mars", 167791]  
+                    ]
+                },
+                {
+                    "value": 3,
+                    "text": "Adventure",
+                    "info": "Loreum",
+                    "suggestions": [
+                        ["Gloomhaven", 174430]
+                    ]
+                },
+                {
+                    "value": 4,
+                    "text": "Racing",
+                    "info": "Loreum",
+                    "suggestions": [
+                        ["Downforce", 215311]
+                    ]
+                },
+                {
+                    "value": 5,
+                    "text": "Pirates",
+                    "info": "loreum",
+                    "suggestions": [
+                        ["Skull King", 150145]
+                    ]  
+                }
+            ]
         }
     ]
 }
