@@ -1,0 +1,34 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+
+
+main {
+    background-color: $darkerGreen;
+
+    img {
+        width: 5vw;
+        aspect-ratio: 1 / 1;
+    }
+
+    > .quiz-card {
+        margin-top: 5vw;
+        font-family: "Segoe UI";
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-left: 4vw;
+    }
+
+    > .questionContainer {
+        font-family: "Segoe UI";
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-left: 4vw;
+
+        .answer {
+            display: flex;
+            gap: 1vw;
+        }
+    }
+}
