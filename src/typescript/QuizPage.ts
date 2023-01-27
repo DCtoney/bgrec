@@ -108,7 +108,8 @@ function displayQuestion(container: HTMLElement, question: Question, questionNum
 }
 
 let main = document.getElementById("quizzes")!;
-let quiz = JSON.parse(sessionStorage.getItem("quiz")!) as Quiz;
+let quiz = new Quiz(JSON.parse(sessionStorage.getItem("quiz")!));
+
 
 displayQuizMetadata(quiz);
 
