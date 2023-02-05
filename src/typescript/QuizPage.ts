@@ -1,5 +1,4 @@
 import Quiz, { Question, Answer } from "./Quiz";   
-import displayQuizMetadata from "./QuizHomePage";
 
 /**
  * generates element for individual answer
@@ -22,6 +21,13 @@ function displayAnswer(container: HTMLElement, answer: Answer): void {
    let answerText = document.createElement("p");
    answerText.classList.add("answer-text");
    answerText.innerText = answer.text;
+
+   let radio = document.createElement("input");
+   radio.type = "radio";
+   radio.name = `answer`;
+   
+
+   answerDiv.appendChild(radio);
    answerDiv.appendChild(answerText);
 
    answerDiv.onclick = function () {
@@ -107,10 +113,30 @@ function displayQuestion(container: HTMLElement, question: Question, questionNum
    container.appendChild(questionDiv);
 }
 
-let main = document.getElementById("quizzes")!;
-let quiz = JSON.parse(sessionStorage.getItem("quiz")!) as Quiz;
+console.log(document.body);
+let main = document.getElementsByTagName("main")[0]!;
+let quiz = new Quiz(JSON.parse(sessionStorage.getItem("quiz")!));
 
-displayQuizMetadata(quiz);
+
+let quizData = document.createElement("div");
+quizData.classList.add("quizData");
+
+let title = document.createElement("h2");
+title.classList.add("quiz-title");
+title.innerText = quiz.title;
+quizData.appendChild(title);
+
+let info = document.createElement("h3");
+info.classList.add("quiz-data");
+info.innerText = `${quiz.author} - ${quiz.time} minutes - ${quiz.questions.length} Questions`;
+quizData.appendChild(info);
+
+let description = document.createElement("p");
+description.classList.add("quiz-description");
+description.innerText = quiz.info;
+quizData.appendChild(description);
+
+main.appendChild(quizData);
 
 let questionNum = 1;
 const numOfQuestions = quiz.questions.length;
@@ -122,9 +148,8 @@ quiz.questions.forEach(question => {
 let button = document.createElement("button");
 button.innerHTML = "See results!";
 button.onclick = function() {
-   sessionStorage.removeItem("result");
    sessionStorage.setItem("result", JSON.stringify(quiz.selectResult()));
-   window.location.href = "./results.html"
+   window.location.href = "./quiz-results.html"
 };
 
 main.appendChild(button);

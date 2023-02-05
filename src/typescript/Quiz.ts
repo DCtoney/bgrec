@@ -1,6 +1,5 @@
 import quizData from './data/quizzes.json';
 
-export const quizzes = quizData.quizzes as Quiz[];
 /**
  * The `Quiz` class. defines quiz fields for access
  */
@@ -12,6 +11,10 @@ export default class Quiz {
     public info: string;
     public questions: Question[];
     public results: Result[];
+
+    public constructor(quiz: any) {
+        Object.keys(quiz).forEach(key => this[key] = quiz[key]);
+    }
 
     public processAnswer(answer: Answer) {
         answer.impacts.forEach(impact => {
@@ -35,6 +38,9 @@ export default class Quiz {
         return bestResult;
     }
 }
+
+export const quizzes: Quiz[] = []
+quizData.quizzes.forEach(quiz => quizzes.push(new Quiz(quiz)));
 
 export interface Answer {
     text: string;
