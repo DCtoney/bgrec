@@ -8,73 +8,243 @@
             "time": 10,
             "info": "Board games have all sorts of ways to play them, which can be incredibly overwhelming. This quiz will help you figure out what sort of games might be up your alley.",
             "questions": [
-                {
+                { 
                     "text": "How much player interaction do you want?",
-                    "image": ""
-                },
-                {
-                    "text": "Which of these is your favorite Childhood game",
+                    "image": "../../assets/images/mechanics_quiz/player_interaction.jpg",
                     "answers": [
                         {
-                            "text": "Monopoly",
-                            "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                            "text": "I want to start a fight",
+                            "impacts": [
+                                ["Area Majority Influence", 4],
+                                ["Trading", 2],
+                                ["Worker Placement", 2],
+                                ["Deck Building", -2],
+                                ["Tableau", -4]
                             ]
                         },
                         {
-                            "text": "Risk",
-                            "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                            "text": "I want the game to be social",
+                            "impacts": [
+                                ["Area Majority Influence", 2],
+                                ["Trading", 4],
+                                ["Worker Placement", 1],
+                                ["Deck Building", -1],
+                                ["Tableau", -2]
                             ]
                         },
                         {
-                            "text": "Battleship",
-                            "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                            "text": "People should be able to make their own plans uninterrupted",
+                            "impacts": [
+                                ["Area Majority Influence", -2],
+                                ["Trading", -4],
+                                ["Worker Placement", -1],
+                                ["Deck Building", 1],
+                                ["Tableau", 2]
                             ]
                         },
                         {
-                            "text": "Sorry",
-                            "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                            "text": "Its fine if everyone is playing solitaire",
+                            "impacts": [
+                                ["Area Majority Influence", -4],
+                                ["Trading", -4],
+                                ["Worker Placement", -2],
+                                ["Deck Building", 2],
+                                ["Tableau", 4]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "What level of complexity are you looking for?",
+                    "image": "../../assets/images/mechanics_quiz/complexity.jpg",
+                    "answers": [
+                        {
+                            "text": "I want to give a 30 minute lecture with a 10 minute Q&A",
+                            "impacts": [
+                                ["Legacy", 4],
+                                ["Tableau", 4],
+                                ["Worker Placement", 2],
+                                ["Tile Placement", -2],
+                                ["Trading", -4]
+                            ]
+                        },
+                        {
+                            "text": "I want a strategic and intricate expreience that is still approachable",
+                            "impacts": [
+                                ["Legacy", 2],
+                                ["Tableau", 2],
+                                ["Worker Placement", 4],
+                                ["Tile Placement", 1],
+                                ["Trading", -2]
+                            ]
+                        },
+                        {
+                            "text": "Strategic, but still playable with family",
+                            "impacts": [
+                                ["Legacy", -2],
+                                ["Tableau", -2],
+                                ["Worker Placement", -1],
+                                ["Tile Placement", 2],
+                                ["Trading", 2]
+                            ]
+                        },
+                        {
+                            "text": "I can explain it in 2 sentences.",
+                            "impacts": [
+                                ["Legacy", -4],
+                                ["Tableau", -4],
+                                ["Worker Placement", -2],
+                                ["Tile Placement", 2],
+                                ["Trading", 4]
                             ]
                         }
                     ]
                 },
                 {
                     "text": "Which of these is your favorite Childhood game",
+                    "image": "../../assets/images/mechanics_quiz/classic.jpg",
                     "answers": [
                         {
                             "text": "Monopoly",
                             "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                                ["Trading", 4]
                             ]
                         },
                         {
                             "text": "Risk",
                             "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                                ["Area Majority Influence", 4]
                             ]
                         },
                         {
-                            "text": "Battleship",
+                            "text": "Life",
                             "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                                ["Legacy", 4]
                             ]
                         },
                         {
-                            "text": "Sorry",
+                            "text": "Rummikub",
                             "impacts":[
-                                ["Auction", 3],
-                                ["Deck Building", -2]
+                                ["Deck Building", 4]
                             ]
+                        }
+                    ]
+                },
+                {
+                    "text": "How many turns ahead do you want to plan?",
+                    "image": "../../assets/images/mechanics_quiz/plan_ahead.jpg",
+                    "answers": [
+                        {
+                            "text": "I can see the future (5+)",
+                            "impacts":[
+                                ["Tile Placement", 4],
+                                ["Tableau", 2],
+                                ["Deck Building", 2]
+                            ]
+                        },
+                        {
+                            "text": "I want to think carefully (3+)",
+                            "impacts":[
+                                ["Tile Placement", 2],
+                                ["Deck Building", 1]
+                            ]
+                        },
+                        {
+                            "text": "Planning is important but not critical (1+)",
+                            "impacts":[
+                                ["Worker Placement", 2],
+                                ["Area Majority Influence", 1]
+                            ]
+                        },
+                        {
+                            "text": "I live in the moment.",
+                            "impacts":[
+                                ["Auction", 4],
+                                ["Area Majority Influence", 2]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "How Much Randomness do you want?",
+                    "image": "../../assets/images/mechanics_quiz/machine-rng.jpg",
+                    "answers": [
+                        {
+                            "text": "It should all be up to strategy",
+                            "impacts": [
+                                ["Tableau", 4],
+                                ["Worker Placement", 4],
+                                ["Deck Building", -2],
+                                ["Trading", -4]
+                            ]
+                        },
+                        {
+                            "text": "Usually the best player wins but everyone is in the game",
+                            "impacts": [
+                                ["Tile Placement", 2],
+                                ["Deck Building", 2],
+                                ["Trading", -4]
+                            ]
+                        },
+                        {
+                            "text": "Its anyone's game",
+                            "impacts": [
+                                ["Deck Building", 2],
+                                ["Trading", 4]
+                            ]
+                        },
+                        {
+                            "text": "Luck is a skill",
+                            "impacts": [
+                                ["Deck Building", 4],
+                                ["Trading", 4],
+                                ["Worker Placement", -2]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Do you want wild swings in leadership",
+                    "image": "../../assets/images/mechanics_quiz/overthrow.jpg",
+                    "answers": [
+                        {
+                            "text": "If you get an early lead you deserve to win.",
+                            "impacts": [
+                                ["Tableau", 4],
+                                ["Worker Placement", 2],
+                                ["Tile Placement", 2],
+                                ["Deck Building", -2],
+                                ["Legacy", -2],
+                                ["Trading", -4]
+                            ]
+                        },
+                        {
+                            "text": "The game shouldn't be decided until the last moment.",
+                            "impacts": [
+                                ["Trading", 4],
+                                ["Deck Building", 2],
+                                ["Legacy", -2],
+                                ["Tableau", -4]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Do you want a story?",
+                    "image": "../../assets/images/mechanics_quiz/story.jpg",
+                    "answers": [
+                        {
+                            "text": "yes",
+                            "impacts": [
+                                ["Legacy", 8],
+                                ["Area Majority Influence", 2]
+                            ]
+                        },
+                        {
+                            "text": "Don't care either way",
+                            "impacts": [
+                                ["Deck Building", 1]
+                            ]                    
                         }
                     ]
                 }
