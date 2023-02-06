@@ -4,10 +4,14 @@
         {
             "title": "Find your Mechanic",
             "author": "Trent Russ",
-            "image": "../../assets/images/trent.jpg",
+            "image": "../../assets/images/mechanics_quiz/mechanic_thumb.JPG",
             "time": 10,
-            "info": "A quiz to help users determine what kind of game playstyle they will enjoy!",
+            "info": "Board games have all sorts of ways to play them, which can be incredibly overwhelming. This quiz will help you figure out what sort of games might be up your alley.",
             "questions": [
+                {
+                    "text": "How much player interaction do you want?",
+                    "image": ""
+                },
                 {
                     "text": "Which of these is your favorite Childhood game",
                     "answers": [
@@ -78,10 +82,65 @@
             "results": [
                 {
                     "value": 0,
-                    "text": "Auction",
-                    "info": "These games can be intensely cut-throat pitting players directly against eachother placing bids on resources.",
+                    "text": "Deck Building",
+                    "info": "These games revolve around filling your personal deck with the best cards possible, forming combos and synergies to beat the opponents.",
                     "suggestions": [
-                        ["Modern Art", 118]  
+                        ["Clank", 201808],
+                        ["Dominion", 36218]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Worker Placement",
+                    "info": "Control your troops or workers by delegating them to collect resources or claim other benefits. These games are intensely competitve and all about stealing your opponent's moves.",
+                    "suggestions": [
+                        ["Everdell", 199792],
+                        ["Dune Imperium", 316554]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Tableau",
+                    "info": "Tableau games have players building their own collection of resources that may combo off of eachother. Tableau games usually have other mechanics implemented, but are usually more complex.",
+                    "suggestions": [
+                        ["Gaia Project", 220308],
+                        ["7 Wonders", 316377]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Trading",
+                    "info": "These games can be intensely cut-throat pitting players directly against eachother either bidding on assets or trading directly. Friendships beware.",
+                    "suggestions": [
+                        ["Modern Art", 118],
+                        ["Bohnanza", 11] 
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Legacy",
+                    "info": "Legacy games are epic journeys spanning multiple hours and sessions of play. They stay interesting by providing a solid narrative, and gameplay changes throughout a central campaign.",
+                    "suggestions": [
+                        ["Gloomhaven", 174430],
+                        ["The King's Dilemma", 245655]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Tile Placement",
+                    "info": "These games are a fun, light experience where players have to line up tiles to build a specific structure. A bit like tetris on steroids.",
+                    "suggestions": [
+                        ["Cascadia", 295947],
+                        ["Caverna", 102794]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Area Majority Influence",
+                    "info": "Colloquially called \"Dudes on a map\" games, these games are all about controlling your troops in battles with other players. Direct confrontations are encouraged and required.",
+                    "suggestions": [
+                        ["Kemet: Blood and Sand", 297562],
+                        ["Inis", 155821] 
                     ]
                 }
             ]
