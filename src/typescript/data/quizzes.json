@@ -91,7 +91,8 @@
                         {
                             "text": "I can explain it in 2 sentences.",
                             "impacts": [
-                                ["Legacy", -4],
+                      
+                                                                ["Legacy", -4],
                                 ["Tableau", -4],
                                 ["Worker Placement", -2],
                                 ["Tile Placement", 2],
