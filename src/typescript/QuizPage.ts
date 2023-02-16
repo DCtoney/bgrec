@@ -111,7 +111,7 @@ function displayQuestion(container: HTMLElement, question: Question, questionNum
 }
 
 console.log(document.body);
-let main = document.getElementsByTagName("main")[0]!;
+let main = document.getElementById("quiz")!;
 let quiz = new Quiz(JSON.parse(sessionStorage.getItem("quiz")!));
 
 
