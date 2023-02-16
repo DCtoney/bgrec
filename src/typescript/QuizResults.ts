@@ -14,13 +14,13 @@ function displaySuggestions(result: Result): HTMLElement {
         suggestionImage.src = game.imageLink;
         suggestionContainer.appendChild(suggestionImage);
 
-        let suggestionLink = document.createElement("a");
-        suggestionLink.href = "/src/html/game.html"
-        suggestionLink.innerHTML = suggestion[0];
-        suggestionLink.onclick = function() {
+        let suggestionName = document.createElement("p");
+        suggestionName.innerHTML = suggestion[0];
+        suggestionContainer.appendChild(suggestionName);
+        suggestionContainer.onclick = function() {
             sessionStorage.setItem("game", JSON.stringify(game));
+            window.location.href = "/src/html/game.html";
         }
-        suggestionContainer.appendChild(suggestionLink);
         suggestions.appendChild(suggestionContainer);
     });
     return suggestions;
@@ -38,7 +38,7 @@ function displayQuizResults(quiz: Quiz, quizResult: Result): HTMLElement{
     resultDiv.appendChild(ageScore);
     ageScore.innerHTML = quizResult.text
 
-    let results = document.createElement("h4")
+    let results = document.createElement("p")
     resultDiv.appendChild(results)
     results.innerText = quizResult.info
 
