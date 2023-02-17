@@ -1,0 +1,49 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+
+body {
+    background-color: $darkerGreen;
+}
+
+main {
+    padding-top: 2em;
+    width:75%;
+    margin:auto;
+    background-color: $white;
+    box-shadow: 0 0 5px 3px $shadow;
+}
+
+.results-box {
+    padding-top: 1em;
+    text-align: center;
+    padding: 1em;
+    h3 {
+        font-family: "Hintown";
+        font-size: 3em;
+    }
+    h4 {
+        font-size: 2em;
+    }
+}
+
+.suggestions-container {
+    display:flex;
+    justify-content: center;
+    gap: 1em;
+    background-color: $white; 
+    box-shadow: 0 0 5px 3px $shadow; 
+    a {
+        font-size: 1.5em;
+    } 
+;}
+
+.suggestion {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5em;
+    text-align: center;
+    padding-top: 0.25em;
+    margin: 1em;
+    box-shadow: 0 0 5px 3px $shadow;
+    cursor: pointer;
+}

@@ -53,6 +53,30 @@ export default class Game {
 export class Games {
 
     /**
+     * Returns the game object with the given ID
+     * 
+     * **Parameters**
+     * ```ts
+     * let id:number
+     * ```
+     * - The id of the desired game
+     * 
+     * **Returns**
+     * 
+     * Returns game object with corresponding id
+     */
+    public static getGameByID(id: number): Game {
+        let gameMatch:Game = games[0];
+        for(let i = 0; i < games.length; i++) {
+            if(games[i].id == id) {
+                gameMatch = games[i];
+                break;
+            }
+        }
+        return gameMatch;
+    }
+
+    /**
      * Returns all games that matches the given properties.
      * 
      * **Example Usage**

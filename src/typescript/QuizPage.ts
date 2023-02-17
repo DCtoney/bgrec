@@ -24,15 +24,11 @@ function displayAnswer(container: HTMLElement, answer: Answer): void {
 
    let radio = document.createElement("input");
    radio.type = "radio";
-   radio.name = `answer`;
+   radio.name = `${container.id}`;
    
 
    answerDiv.appendChild(radio);
    answerDiv.appendChild(answerText);
-
-   answerDiv.onclick = function () {
-      quiz.processAnswer(answer);
-   }
 
    container.appendChild(answerDiv);
 }
@@ -104,6 +100,7 @@ function displayQuestion(container: HTMLElement, question: Question, questionNum
    
    let answersDiv = document.createElement("div");
    answersDiv.classList.add("answers-container");
+   answersDiv.id = `${question.text}`;
 
    question.answers.forEach(answer => {
       displayAnswer(answersDiv, answer);
@@ -114,7 +111,7 @@ function displayQuestion(container: HTMLElement, question: Question, questionNum
 }
 
 console.log(document.body);
-let main = document.getElementsByTagName("main")[0]!;
+let main = document.getElementById("quiz")!;
 let quiz = new Quiz(JSON.parse(sessionStorage.getItem("quiz")!));
 
 
@@ -146,8 +143,18 @@ quiz.questions.forEach(question => {
 });
 
 let button = document.createElement("button");
+let selectedAnswerText: string;
 button.innerHTML = "See results!";
 button.onclick = function() {
+   Array.from(main.children).forEach((questionDiv, qstIndex) => {
+      if (questionDiv.classList.contains("questionContainer")){
+         Array.from(questionDiv.children.item(1)!.children).forEach((answerDiv, ansIndex) => {
+            if ((Array.from(answerDiv.children)[0] as HTMLInputElement).checked) {         
+               quiz.processAnswer(quiz.questions[qstIndex - 1].answers[ansIndex]);
+            }
+         });
+      }
+   });
    sessionStorage.setItem("result", JSON.stringify(quiz.selectResult()));
    window.location.href = "./quiz-results.html"
 };
