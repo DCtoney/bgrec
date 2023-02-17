@@ -11,7 +11,8 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
                     search: "src/html/search.html",
                     about: "src/html/about.html",
                     game: "src/html/game.html",
-                    results: "src/html/search-results.html"
+                    results: "src/html/search-results.html",
+                    login: "src/html/profile-login.html"
                 }
             }
         }
