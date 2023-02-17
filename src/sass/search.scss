@@ -15,14 +15,14 @@ main {
     background-color: transparent;
 
     // The "Forage" title above the search bar
-    >h1 {
+    > h1 {
         font-family: "Hintown";
         font-size: 8vw;
         margin: 0;
         color: rgb(4, 46, 0);
     }
 
-    >#search-wrapper {
+    > #search-wrapper {
 
         border-radius: 100vmax;
         font-size: 1.5vw;
@@ -35,7 +35,7 @@ main {
         background-color: white;
 
         // The search bar itself
-        >#search {
+        > #search {
             height: 100%;
             width: 100%;
             border: none;
@@ -55,12 +55,12 @@ main {
     }
 
     // Filters div
-    >div:not(:first-child) {
+    > div:not(:first-child) {
         display: flex;
         gap: 1vw;
 
         // "Filters" button buttons
-        >button {
+        > button {
             font-size: 1vw;
             border: none;
             padding: 0.75vw;
@@ -100,7 +100,7 @@ main {
                 }
 
                 // Dropdown Menus
-                >div {
+                > div {
                     background-color: white;
                     position: absolute;
                     top: 100%;
@@ -164,7 +164,7 @@ input[type=number] {
 }
 
 // Genres
-#genre {
+#genre, #mechanics {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
