@@ -1,0 +1,11 @@
+@import "./shared/variables.scss";
+@import "./shared/nav.scss";
+
+body {
+    background-color: $darkerGreen;
+
+    .container {
+        color: white;
+    }
+
+}
