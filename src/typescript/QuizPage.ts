@@ -159,4 +159,7 @@ button.onclick = function() {
    window.location.href = "./quiz-results.html"
 };
 
-main.appendChild(button);
+let wrapper = document.createElement("div");
+wrapper.id = "button-wrapper";
+wrapper.appendChild(button);
+main.appendChild(wrapper);

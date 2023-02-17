@@ -40,11 +40,30 @@ main {
             font-size: 2vw;
             margin: 0;
         }
+    }
+    
+    > #button-wrapper {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
 
-        >button {
+        > button {
             font-family: "Segoe UI";
             font-size: 2vw;
-            align-items: center;
+            text-align: center;
+            background-color: $lightGreen;
+            border: none;
+            padding: 1vw;
+            margin: auto;
+            transition-duration: 0.8s;
+            cursor: pointer;
+        }
+
+        > button:hover {
+            background-color: $lighterGreen;
+            box-shadow: 0 0 1vw rgba($darkGrey, .5);
+            border-radius: 1.5vw;
         }
     }
     
