@@ -17,6 +17,7 @@ function displaySuggestions(result: Result): HTMLElement {
         let suggestionName = document.createElement("p");
         suggestionName.innerHTML = suggestion[0];
         suggestionContainer.appendChild(suggestionName);
+        
         suggestionContainer.onclick = function() {
             sessionStorage.setItem("game", JSON.stringify(game));
             window.location.href = "/src/html/game.html";
