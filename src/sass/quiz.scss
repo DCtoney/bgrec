@@ -1,34 +1,70 @@
 @import "./shared/variables.scss";
 @import "./shared/nav.scss";
 
-
 main {
-    background-color: $darkerGreen;
+    width: fit-content;
+    align-items: center;
+
+    margin: auto;
+    margin-top: 8vw;
+    width: 80%;
+
+    background-color: white;
+    box-shadow: 0 0 5px 3px rgba($darkGrey, .5);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 
     img {
         width: 5vw;
         aspect-ratio: 1 / 1;
     }
 
-    > .quiz-card {
-        margin-top: 5vw;
-        font-family: "Segoe UI";
-        display: flex;
-        flex-direction: column;
-        color: white;
-        margin-left: 4vw;
-    }
+    .quizData {
+        >h2 {
+            font-family: "Hintown";
+            font-size: 4vw;
+            margin: 0;
+            text-align: center;
+        }
 
-    > .questionContainer {
-        font-family: "Segoe UI";
-        display: flex;
-        flex-direction: column;
-        color: white;
-        margin-left: 4vw;
+        >h3 {
+            font-family: "Segoe UI";
+            font-size: 2vw;
+            margin: 0;
+        }
 
-        .answer {
-            display: flex;
-            gap: 1vw;
+        >p {
+            font-family: "Segoe UI";
+            font-size: 2vw;
+            margin: 0;
+        }
+
+        >button {
+            font-family: "Segoe UI";
+            font-size: 2vw;
+            align-items: center;
         }
     }
+    
+    .answer {
+        display: inline-flex;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+    .questionContainer{
+        
+        >.answer-container{
+            display: flex;
+            gap: 1vw;
+            float: inline;
+        }
+    }
+}
+
+body {
+    background-color: $darkerGreen;
+    background-size: cover;
+    background-position: center;
 }

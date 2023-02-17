@@ -108,13 +108,11 @@ export class Games {
             if (filters.rank && !(filters.rank.maximum >= game.rank && game.rank >= filters.rank.minimum)) return;
 
             if (filters.genres?.length) {
-                if (filters.genres.filter(genre => genre.state == "exclude").some(genre => game.genres.includes(genre.name))) return;
-                if (!filters.genres.filter(genre => genre.state == "include").every(genre => game.genres.includes(genre.name))) return;
+                if (!filters.genres.filter(genre => genre.state == "include").some(genre => game.genres.includes(genre.name))) return;
             }
 
             if (filters.mechanics?.length) {
-                if (filters.mechanics.filter(mechanic => mechanic.state == "exclude").some(mechanic => game.mechanics.includes(mechanic.name))) return;
-                if (!filters.mechanics.filter(mechanic => mechanic.state == "include").every(mechanic => game.mechanics.includes(mechanic.name))) return;
+                if (!filters.mechanics.filter(mechanic => mechanic.state == "include").some(mechanic => game.mechanics.includes(mechanic.name))) return;
             }
 
             correctGames.push(game);

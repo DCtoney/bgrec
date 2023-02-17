@@ -179,8 +179,8 @@ function filteredResults(): Game[] {
             minimum: Number(sessionStorage.getItem("minimumRank")) || -Infinity,
             maximum: Number(sessionStorage.getItem("maximumRank")) || Infinity
         },
-        genres: sessionStorage.getItem("genres")?.length ? JSON.parse(sessionStorage.getItem("genres")!) : undefined,
-        mechanics: sessionStorage.getItem("mechanics")?.length ? JSON.parse(sessionStorage.getItem("mechanics")!) : undefined
+        genres: localStorage.getItem("genres")?.length ? JSON.parse(localStorage.getItem("genres")!) : undefined,
+        mechanics: localStorage.getItem("mechanics")?.length ? JSON.parse(localStorage.getItem("mechanics")!) : undefined
     }) : games;
 }
 
