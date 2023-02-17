@@ -1,6 +1,6 @@
-function fakeLogin(): void {
-    if (document.getElementById('uname')!.innerText.length != 0 && document.getElementById('pass')!.innerText.length != 0) {
-        console.log("in if");
+$("#submit-button").on("click", _event => {
+    console.log("button clicked!")
+    if (document.querySelector<HTMLInputElement>('#uname')!.value && document.querySelector<HTMLInputElement>('#pass')!.value) {
         // I am aware we are storing a user password in plain text in session storage. 
         // I would use OAuth2.0 if this was a real project.
         sessionStorage.setItem("username", document.getElementById('uname')!.innerText);
@@ -8,7 +8,7 @@ function fakeLogin(): void {
         console.log("set session storage");
         window.location.href = "./profile.html";
     }
-}
+});
 
 window.onload = () => {
     console.log("window loads!");
