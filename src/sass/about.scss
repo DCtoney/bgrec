@@ -28,10 +28,14 @@ main {
     > div {
         width: calc(25% - (3/4 * $gap));
         text-align: center;
+        background-color: white;
+        box-shadow: 0 0 5px 3px rgba($darkGrey, .5);
+        padding: 2vw;
+        transition-duration: 0.8s;
 
         // Name
         > h1 {  
-            font-family: "Segoe UI";
+            font-family: "Hintown";
             font-size: 2vw;
         }
 
@@ -48,4 +52,13 @@ main {
             border-radius: 50%;
         }
     }
+    > div:hover {
+        box-shadow: 0 0 2vw rgba($darkGrey, .5);
+        border-radius: 1.5vw;
+        scale: 1.1;
+    }
+}
+
+body {
+    background-color: $darkerGreen;
 }
