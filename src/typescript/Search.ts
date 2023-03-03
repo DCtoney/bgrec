@@ -20,6 +20,7 @@ filters.nextAll().on("click", function (_event) {
     this.style.setProperty("--rotation", "0deg");
 });
 
+//when mouse leaves filter, close it
 filters.nextAll().on("mouseleave", function (_event) {
     $(this.firstElementChild!).css({ height: "0px" });
     this.style.setProperty("--rotation", "-90deg");
@@ -31,7 +32,7 @@ filters.parent().on("clickoutside", _event => {
     filters.css({ display: "flex" });
 });
 
-// TODO: Add half-stars
+//Controls selection of star ratings
 $("img[data-star]").on("mouseenter", function (_event) {
     $(this).attr("src", "assets/images/full_star.png");
     userRating = 2;
@@ -49,6 +50,7 @@ $("img[data-star]").on("mouseenter", function (_event) {
         { color: "palegreen", data: "include" }, 
     ];
 
+    //control drop down for genre
     $("#genre").children().attr("data-click-count", "0");
     $("#genre").children().on("click", function(_event) {
         let clickCount = Number($(this).attr("data-click-count")) + 1;
@@ -62,6 +64,7 @@ $("img[data-star]").on("mouseenter", function (_event) {
         localStorage.setItem("genres", JSON.stringify(genres));
     });
 
+    //control drop down for mechanics
     $("#mechanics").children().attr("data-click-count", "0");
     $("#mechanics").children().on("click", function(_event) {
         let clickCount = Number($(this).attr("data-click-count")) + 1;
@@ -76,6 +79,7 @@ $("img[data-star]").on("mouseenter", function (_event) {
     });
 }
 
+//execute search when hitting enter
 $("#search").on("keypress", function (event) {
     if (event.key === "Enter") {
         search($(this).prop("value"), { userRating });

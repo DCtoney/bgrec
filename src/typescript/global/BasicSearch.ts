@@ -2,7 +2,8 @@ type InclusionState = "include" | "exclude";
 
 let basicSearch = $("#nav-search").prev();
 
-$("#nav-search").on("mouseover", event => {
+//open search bar when hovering nav search icon
+$("#nav-search").on("mouseover", _event => {
     basicSearch.css({
         width: "25vw",
         paddingLeft: "1em",
@@ -10,11 +11,13 @@ $("#nav-search").on("mouseover", event => {
     });
 });
 
-$("#nav-search").on("click", event => {
+//Execute search when clicking icon
+$("#nav-search").on("click", _event => {
     search(basicSearch.attr("value")!, { filters: false });
 });
 
-$("#nav-search").parent().on("clickoutside", event => {
+//close nav bar search when clicking away
+$("#nav-search").parent().on("clickoutside", _event => {
     basicSearch.css({
         width: "",
         paddingLeft: "",
@@ -22,12 +25,14 @@ $("#nav-search").parent().on("clickoutside", event => {
     });
 });
 
+//executes the search when pressing enter
 basicSearch.on("keypress", event => {
     if (event.key === "Enter") {
         search(basicSearch.prop("value"), { filters: false });
     }
 });
 
+//default search bar behavior for home page
 let defaultSearchOptions = {
     filters: true, 
     userRating: 0

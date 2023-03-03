@@ -189,6 +189,7 @@ let filtered = filteredResults();
 let searchTerm = sessionStorage.getItem("searchTerm")!
 let results: Game[];
 if (!searchTerm) results = filtered.slice(0, 10);
+//@ts-ignore compiles fine, just an issue with placement of .tsconfig file
 else results = searchTerm.topGameMatches(10, filtered);
 results.forEach(game => {
     let gameContainer = createGameDisplay(game);
