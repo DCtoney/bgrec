@@ -22,6 +22,7 @@ main {
         color: rgb(4, 46, 0);
     }
 
+    //div for search bar
     > #search-wrapper {
 
         border-radius: 100vmax;
@@ -34,7 +35,6 @@ main {
         height: 3.25vw;
         background-color: white;
 
-        // The search bar itself
         > #search {
             height: 100%;
             width: 100%;
@@ -45,6 +45,7 @@ main {
             padding-bottom: 1vw;
         }
 
+        //magnifying glass
         > img {
             height: 50%;
             width: auto;
@@ -150,6 +151,7 @@ input {
     padding-left: 4px;
     line-height: 1em;
 
+    //removes up and down arrows for numerical input
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         appearance: none;

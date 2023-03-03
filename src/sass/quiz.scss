@@ -72,13 +72,11 @@ main {
         padding-left: 1vw;
         padding-right: 1vw;
     }
-    .questionContainer{
-        
-        >.answer-container{
-            display: flex;
-            gap: 1vw;
-            float: inline;
-        }
+    
+    .answer-container{
+        display: flex;
+        gap: 1vw;
+        float: inline;
     }
 }
 
