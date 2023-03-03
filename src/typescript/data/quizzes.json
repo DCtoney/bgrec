@@ -324,62 +324,69 @@
             "info": "A quiz to help users determine what age range is best for them or their group",
             "questions": [
                 {
-                    "text": "Age of user or age of the youngest player in the group",
+                    "text": "Age of the youngest player in the group",
                     "answers": [
                         {
-                            "text": "3",
+                            "text": "under 3",
                             "impacts":[
-                                ["minimumAge", 3],
-                                ["complexityAverage", 1]
+                                ["Under 3", 7]
                             ]
                         },
                         {
-                            "text": "5",
+                            "text": "3-5",
                             "impacts":[
-                                ["minimumAge", 5],
-                                ["complexityAverage", 1]
+                                ["Under 3", 6],
+                                ["Between 3 and 5", 7]
                             ]
                         },
                         {
-                            "text": "7",
+                            "text": "5-7",
                             "impacts":[
-                                ["minimumAge", 7],
-                                ["complexityAverage", 2]
+                                ["Under 3", 5],
+                                ["Between 3 and 5", 6],
+                                ["Between 5 and 7", 7]
                             ]
                         },
                         {
-                            "text": "9",
+                            "text": "7-10",
                             "impacts":[
-                                ["minimumAge", 9],
-                                ["complexityAverage", 2]
+                                ["Under 3", 4],
+                                ["Between 3 and 5", 5],
+                                ["Between 5 and 7", 6],
+                                ["Between 7 and 10", 7]
                             ]
                         },
                         {
-                            "text": "11",
+                            "text": "10-13",
                             "impacts":[
-                                ["minimumAge", 11],
-                                ["complexityAverage", 2]
+                                ["Under 3", 3],
+                                ["Between 3 and 5", 4],
+                                ["Between 5 and 7", 5],
+                                ["Between 7 and 10", 6],
+                                ["Between 10 and 13", 7]
                             ]
                         },
                         {
-                            "text": "13",
+                            "text": "13-17",
                             "impacts":[
-                                ["minimumAge", 13],
-                                ["complexityAverage", 3]
+                                ["Under 3", 2],
+                                ["Between 3 and 5", 3],
+                                ["Between 5 and 7", 4],
+                                ["Between 7 and 10", 5],
+                                ["Between 10 and 13", 6],
+                                ["Between 13 and 17", 7]
                             ]
                         },
                         {
-                            "text": "15",
+                            "text": "18+",
                             "impacts":[
-                                ["minimumAge", 15],
-                                ["complexityAverage", 4]
-                            ]
-                        },
-                        {
-                            "text": "17+",
-                            "impacts":[
-                                ["minimumAge", 17],
-                                ["complexityAverage", 5]
+                                ["Under 3", 1],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 3],
+                                ["Between 7 and 10", 4],
+                                ["Between 10 and 13", 5],
+                                ["Between 13 and 17", 6],
+                                ["18 and Up", 7]
                             ]
                         }
                     ]
@@ -390,25 +397,49 @@
                         {
                             "text": "Easy",
                             "impacts":[
-                                ["complexityAverage", 1]
+                                ["Under 3", 4],
+                                ["Between 3 and 5", 4],
+                                ["Between 5 and 7", 4],
+                                ["Between 7 and 10", 4],
+                                ["Between 10 and 13", -1],
+                                ["Between 13 and 17", -1],
+                                ["18 and Up", -2]
                             ]
                         },
                         {
                             "text": "Medium",
                             "impacts":[
-                                ["complexityAverage", 2]
+                                ["Under 3", 1],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 4],
+                                ["Between 7 and 10", 4],
+                                ["Between 10 and 13", 2],
+                                ["Between 13 and 17", -1],
+                                ["18 and Up", -2]
                             ]
                         },
                         {
                             "text": "Hard",
                             "impacts":[
-                                ["complexityAverage", 4]
+                                ["Under 3", -4],
+                                ["Between 3 and 5", -2],
+                                ["Between 5 and 7", -1],
+                                ["Between 7 and 10", 0],
+                                ["Between 10 and 13", 1],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 3]
                             ]
                         },
                         {
                             "text": "Challenging",
                             "impacts":[
-                                ["complexityAverage", 5]
+                                ["Under 3", -3],
+                                ["Between 3 and 5", -3],
+                                ["Between 5 and 7", -3],
+                                ["Between 7 and 10", -2],
+                                ["Between 10 and 13", -1],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 4]
                             ]
                         }
                     ]
@@ -419,48 +450,67 @@
                         {
                             "text": "Under 30 minutes",
                             "impacts": [
-                                ["maxPlaytime", 30]
+                                ["Under 3", 2],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 1]
                             ]
                         },
                         {
                             "text": "Under an hour",
                             "impacts": [
-                                ["maxPlaytime", 60]
+                                ["Under 3", 1],
+                                ["Between 3 and 5", 1],
+                                ["Between 5 and 7", 1],
+                                ["Between 7 and 10", 2],
+                                ["Between 10 and 13", 2]
                             ]
                         },
                         {
                             "text": "Under 90 minutes",
                             "impacts": [
-                                ["maxPlaytime", 90]
+                                ["Between 7 and 10", 1],
+                                ["Between 10 and 13", 2],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 2]
                             ]
                         },
                         {
                             "text": "2 hours or more",
                             "impacts": [
-                                ["minPlaytime", 120]
+                                ["Between 10 and 13", 1],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 4]
                             ]
                         }
                     ]
                 },
                 {
-                    "text": "Finish the sentece: We want games that are:",
+                    "text": "Finish the sentece: We want games that are",
                     "answers": [
                         {
                             "text": "More random (easier for younger kids)",
                             "impacts": [
-                                ["types", 0]
+                                ["Under 3", 2],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 2],
+                                ["Between 7 and 10", 1],
+                                ["Between 10 and 13", 1]
                             ]
                         },
                         {
                             "text": "More strategy-based (easier for older kids)",
                             "impacts": [
-                                ["types", 1]
+                                ["Between 7 and 10", 1],
+                                ["Between 10 and 13", 2],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 2]
                             ]
                         },
                         {
                             "text": "More knowledge-based (easier for adults)",
                             "impacts": [
-                                ["types", 2]
+                                ["Between 13 and 17", 2],
+                                ["18 and Up and Up", 2]
                             ]
                         }
                     ]
@@ -469,10 +519,58 @@
             "results": [
                 {
                     "value": 0,
-                    "text": "13",
-                    "info": "A good age range for you and your group is 13. These games have a mix of strategy and randomness, making for an enjoyable experience for everyone",
+                    "text": "Under 3",
+                    "info": "A good age range for your group is 3 and under.",
                     "suggestions": [
-                        ["Modern Art", 118]  
+                        ["Katamino", 6931]  
+                    ]
+                }, 
+                {
+                    "value": 0,
+                    "text": "Between 3 and 5",
+                    "info": "A good age range for your group is from 3-5.",
+                    "suggestions": [
+                        ["Outfoxed!", 172931]  
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Between 5 and 7",
+                    "info": "A good age range for your group is from 5-7.",
+                    "suggestions": [
+                        ["Pete the Pirate", 916]  
+                    ]
+                }, 
+                {
+                    "value": 0,
+                    "text": "Between 7 and 10",
+                    "info": "A good age range for your group is from 7-10.",
+                    "suggestions": [
+                        ["Carcassonne", 822]  
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Between 10 and 13",
+                    "info": "A good age range for your group is from 10-13.",
+                    "suggestions": [
+                        ["Terraforming Mars", 167791]  
+                    ]
+                }, 
+                {
+                    "value": 0,
+                    "text": "Between 13 and 17",
+                    "info": "A good age range for your group is from 13-17.",
+                    "suggestions": [
+                        ["Blood on the Clocktower", 240980]  
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "18 and Up",
+                    "info": "A good age range for your group is 18+.",
+                    "suggestions": [
+                        ["Joking Hazard", 193621]  
                     ]
                 }
             ]
@@ -485,34 +583,102 @@
             "info": "A quiz to help users determine what genres may interest you!",
             "questions": [
                 {
-                    "text": "Which of these is your favorite Movie",
+                    "text": "Which of these is your favorite Movie?",
                     "answers": [
                         {
                             "text": "Lord of the Rings",
                             "impacts":[
-                                ["Adventure", 3],
-                                ["Pirates", -2]
+                                ["Adventure", 4],
+                                ["Civilization", 2],
+                                ["Exploration", 1]
                             ]
                         },
                         {
                             "text": "Star Wars",
                             "impacts":[
-                                ["Science Fiction", 2],
-                                ["Pirates", -2]
+                                ["Science Fiction", 4],
+                                ["Industry / Manufacturing", 2],
+                                ["Space Exploration", 1]
                             ]
                         },
                         {
                             "text": "Cars",
                             "impacts":[
-                                ["Racing", 4],
-                                ["Adventure", -2]
+                                ["Racing", 4]
                             ]
                         },
                         {
                             "text": "Pirates of the Caribbean",
                             "impacts":[
-                                ["Pirates", 5],
-                                ["Science Fiction", -2]
+                                ["Pirates", 4],
+                                ["Exploration", 2]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "What is your favorite Video Game?",
+                    "answers": [
+                        {
+                            "text": "Super Mario Brothers",
+                            "impacts": [
+                                ["Adventrue", 4]
+                            ]
+                        },
+                        {
+                            "text": "Sid Meier's Civilization",
+                            "impacts": [
+                                ["Civilization", 4],
+                                ["Exploration", 4],
+                                ["Industry / Manufacturing", 2]
+                            ]
+                        },
+                        {
+                            "text": "Borderlands 3",
+                            "impacts": [
+                                ["Exploration", 4],
+                                ["Science Fiction", 3]
+                            ]
+                        },
+                        {
+                            "text": "Forza Horizon",
+                            "impacts": [
+                                ["Racing", 6],
+                                ["Exploration", 3]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "What do you like to do in your spare time?",
+                    "answers": [
+                        {
+                            "text": "Swimming",
+                            "impacts": [
+                                ["Pirates", 4],
+                                ["Exploration", 1]
+                            ]
+                        },
+                        {
+                            "text": "Hiking",
+                            "impacts": [
+                                ["Exploration", 5],
+                                ["Adventure", 2]
+                            ]
+                        },
+                        {
+                            "text": "Sculpting",
+                            "impacts": [
+                                ["Industry / Manufacturing", 5]
+                            ]
+                        },
+                        {
+                            "text": "Daydreaming",
+                            "impacts": [
+                                ["Adventure", 2],
+                                ["Science Fiction", 2],
+                                ["Pirates", 2],
+                                ["Space Exploration", 2]
                             ]
                         }
                     ]
@@ -520,36 +686,70 @@
             ],
             "results": [
                 {
-                    "value": 2,
+                    "value": 0,
                     "text": "Science Fiction",
-                    "info": "SPAAAACE.",
+                    "info": "Science Fiction games often have themes relating to imagined possibilities in the sciences. Such games need not be futuristic; they can be based on an alternative past. (For example, the writings of Jules Verne and the Star Wars saga are set before present time.) Many of the most popular Science Fiction games are set in outer space, and often involve alien races.",
                     "suggestions": [
                         ["Terraforming Mars", 167791]  
                     ]
                 },
                 {
-                    "value": 3,
+                    "value": 0,
                     "text": "Adventure",
-                    "info": "Loreum",
+                    "info": "Adventure games often have themes of heroism, exploration, and puzzle-solving. The storyline behind such games often have fantastical elements, and involve the characters in some sort of quest.",
                     "suggestions": [
                         ["Gloomhaven", 174430]
                     ]
                 },
                 {
-                    "value": 4,
+                    "value": 0,
                     "text": "Racing",
-                    "info": "Loreum",
+                    "info": "Games where the objective is to be the first to reach a checkpoint by navigation or steering around obstacles, usually by having greater speed and/or control than your opponents.",
                     "suggestions": [
                         ["Downforce", 215311]
                     ]
                 },
                 {
-                    "value": 5,
+                    "value": 0,
                     "text": "Pirates",
-                    "info": "loreum",
+                    "info": "Pirate games often have themes or storylines of piracy. Some of the most popular themes and imagery in Pirate games concerns treasure hunting, sea robbery, swords and cannons, swashbuckling, and ship racing. Many Pirate games occur in timelines prior to the 20th century.",
                     "suggestions": [
                         ["Skull King", 150145]
                     ]  
+                },
+                {
+                    "value": 0,
+                    "text": "Civilization",
+                    "info": "Civilization games often have players developing and managing a society of people. The aim of each player is usually to employ citizens in ways that are beneficial to society, and have them progress throughout the game so that their civilization gains superiority over others. Civilization games may have each player build their society independently, or through warfare and diplomacy, each player may find themselves benefiting or suffering from the actions of others.",
+                    "suggestions": [
+                        ["Empires of the Void II", 218509],
+                        ["Three Kingdoms Redux", 145371]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Exploration",
+                    "info": "Exploration games often encourage players to discover and search new areas or territories for particular objects or goods, and/or to search for people to become trading partners with.",
+                    "suggestions": [
+                        ["Inis", 155821],
+                        ["Endeavor: Age of Sail", 233398]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Industry / Manufacturing",
+                    "info": "Industry / Manufacturing games encourage players to build, manage and/or operate tools and machinery in order to manufacture raw materials into goods and products.",
+                    "suggestions": [
+                        ["Brass: Birmingham", 224517]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Space Exploration",
+                    "info": "Space Exploration games often have themes and storylines relating to travel and adventure in outer space. Often, players must seek and gather resources and territories as objectives of the game.",
+                    "suggestions": [
+                        ["Cosmic Encounter", 39463]
+                    ]
                 }
             ]
         }
