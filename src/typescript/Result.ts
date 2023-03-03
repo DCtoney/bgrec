@@ -143,7 +143,7 @@ function createGameDisplay(game: Game): HTMLElement {
 
     container.addEventListener("click", function () {
         sessionStorage.setItem("game", JSON.stringify(game));
-        window.location.href = "./game.html";
+        window.location.href = "./gameDisplay.html";
     });
 
     return container;

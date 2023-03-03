@@ -20,7 +20,7 @@ function displaySuggestions(result: Result): HTMLElement {
         
         suggestionContainer.onclick = function() {
             sessionStorage.setItem("game", JSON.stringify(game));
-            window.location.href = "/src/html/game.html";
+            window.location.href = "/src/html/gameDisplay.html";
         }
         suggestions.appendChild(suggestionContainer);
     });
