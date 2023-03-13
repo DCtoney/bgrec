@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Metadata -->
     <meta charset="UTF-8">
@@ -35,37 +36,49 @@
         <a href="./quizzes.html">Quizzes</a>
         <a href="./profile-login.html">My Account</a>
         <div>
-            <input type="text" placeholder="Basic Search"/>
-            <img src="/assets/images/search.png" id="nav-search"/>
+            <input type="text" placeholder="Basic Search" />
+            <img src="/assets/images/search.png" id="nav-search" />
         </div>
     </nav>
-    <main>
-        <article class="results-box">
-            <div class="information-box">
-                <img id="box-art"></img>
-                <h1 id="title"></h1>
-                <h2>Description</h2>   
-                <p id="description"></p>
-                <h3>Global Rank:</h3>
-                <p id="body"><span id="glo-rank"></span></p>
-                <h3>User Rating:</h3>
-                <p id="body"><span id="user-rate"></span></p>
-                <h3>Recommended Player Age Range:</h3>
-                <p id="body"><span id="p-age"></span></p>
-                <h3>Player Count:</h3>
-                <p id="body"><span id="p-count"></span></p>
-                <h3>Estimated Playtime:</h3>
-                <p id="body"><span id="estimated-time"></span></p>
-                <h3>Year Published:</h3>
-                <p id="body"><span id="year-pub"></span></p>
-                <h3>Genres:</h3>
-                <p id="body"><span id="genres"></span></p>
-                <h3>Mechanics:</h3>
-                <p id="body"><span id="mechanics"></span></p>
-                
-                <p>Data retieved From <a target = "_blank" id="reference">Board Game Geek</a></p>
+    <main style="display: flex; flex-direction: column; align-items: center; padding: 5vw;">
+        <div style="display: flex; align-items: center; gap: 3vw;">
+            <img id="box-art"></img>
+            <h1 id="title" style="font-weight: normal; font-size: 7vw;"></h1>
+        </div>
+
+        <div id="stats">
+            <div>
+                <p id="body" title="Global Rank">🏆&nbsp;<span id="glo-rank"></span></p>
             </div>
-        </article>
+
+            <div>
+                <p id="body" title="User Rating">⭐&nbsp;<span id="user-rate"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="Target Age">🧓&nbsp;<span id="p-age"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="Player Count">👤&nbsp;<span id="p-count"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="Estimated Playtime">🕑&nbsp;<span id="estimated-time"></span></p>
+            </div>
+            <div>
+                <p id="body" title="Year Published">📅&nbsp;<span id="year-pub"></span></p>
+            </div>
+        </div>
+        <p id="description" style="margin-bottom: 3vw;"></p>
+        <div>
+            <p id="body">Mechanics: <span id="mechanics"></span></p>
+        </div>
+        <div>
+            <p id="body">Genres: &nbsp;<span id="genres"></span></p>
+        </div>
+        <p>Data retieved From <a target="_blank" id="reference">Board Game Geek</a></p>
     </main>
 </body>
+
 </html>
