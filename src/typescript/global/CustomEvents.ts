@@ -1,4 +1,4 @@
-// Initialize "clickoutside" event
+// Initialize "clickoutside" event for closing filters
 let originalAddEventListener = jQuery.fn.on as Function;
 jQuery.fn.on = function (this: JQuery, type: string, listener: (event: Event) => any) {
     if (type === "clickoutside") {
@@ -12,5 +12,3 @@ jQuery.fn.on = function (this: JQuery, type: string, listener: (event: Event) =>
     }
     else originalAddEventListener.call(this, type, listener);
 } as any;
-
-export function dontUseThis() { }

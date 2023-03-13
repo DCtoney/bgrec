@@ -16,6 +16,15 @@ export default class Quiz {
         Object.keys(quiz).forEach(key => this[key] = quiz[key]);
     }
 
+    /**
+     * Applies the impacts of the answer to the scores of the results.
+     * 
+     * **Parameters**
+     * ```ts
+     * let answer:Answer
+     * ```
+     * - the Answer object to be processed
+     */
     public processAnswer(answer: Answer) {
         answer.impacts.forEach(impact => {
             this.results.forEach(result => {
@@ -26,6 +35,13 @@ export default class Quiz {
         });
     }
 
+    /**
+     * Finds the highest scoring result in the list of possible results the user can recieve.
+     * 
+     * **Returns**
+     * 
+     * Returns Result object with highest sccore
+     */
     public selectResult(): Result {
         let bestResult = this.results[0];
 

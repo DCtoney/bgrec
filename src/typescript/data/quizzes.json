@@ -324,62 +324,69 @@
             "info": "A quiz to help users determine what age range is best for them or their group",
             "questions": [
                 {
-                    "text": "Age of user or age of the youngest player in the group",
+                    "text": "Age of the youngest player in the group",
                     "answers": [
                         {
-                            "text": "3",
+                            "text": "under 3",
                             "impacts":[
-                                ["minimumAge", 3],
-                                ["complexityAverage", 1]
+                                ["Under 3", 7]
                             ]
                         },
                         {
-                            "text": "5",
+                            "text": "3-5",
                             "impacts":[
-                                ["minimumAge", 5],
-                                ["complexityAverage", 1]
+                                ["Under 3", 6],
+                                ["Between 3 and 5", 7]
                             ]
                         },
                         {
-                            "text": "7",
+                            "text": "5-7",
                             "impacts":[
-                                ["minimumAge", 7],
-                                ["complexityAverage", 2]
+                                ["Under 3", 5],
+                                ["Between 3 and 5", 6],
+                                ["Between 5 and 7", 7]
                             ]
                         },
                         {
-                            "text": "9",
+                            "text": "7-10",
                             "impacts":[
-                                ["minimumAge", 9],
-                                ["complexityAverage", 2]
+                                ["Under 3", 4],
+                                ["Between 3 and 5", 5],
+                                ["Between 5 and 7", 6],
+                                ["Between 7 and 10", 7]
                             ]
                         },
                         {
-                            "text": "11",
+                            "text": "10-13",
                             "impacts":[
-                                ["minimumAge", 11],
-                                ["complexityAverage", 2]
+                                ["Under 3", 3],
+                                ["Between 3 and 5", 4],
+                                ["Between 5 and 7", 5],
+                                ["Between 7 and 10", 6],
+                                ["Between 10 and 13", 7]
                             ]
                         },
                         {
-                            "text": "13",
+                            "text": "13-17",
                             "impacts":[
-                                ["minimumAge", 13],
-                                ["complexityAverage", 3]
+                                ["Under 3", 2],
+                                ["Between 3 and 5", 3],
+                                ["Between 5 and 7", 4],
+                                ["Between 7 and 10", 5],
+                                ["Between 10 and 13", 6],
+                                ["Between 13 and 17", 7]
                             ]
                         },
                         {
-                            "text": "15",
+                            "text": "18+",
                             "impacts":[
-                                ["minimumAge", 15],
-                                ["complexityAverage", 4]
-                            ]
-                        },
-                        {
-                            "text": "17+",
-                            "impacts":[
-                                ["minimumAge", 17],
-                                ["complexityAverage", 5]
+                                ["Under 3", 1],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 3],
+                                ["Between 7 and 10", 4],
+                                ["Between 10 and 13", 5],
+                                ["Between 13 and 17", 6],
+                                ["18 and Up", 7]
                             ]
                         }
                     ]
@@ -390,25 +397,49 @@
                         {
                             "text": "Easy",
                             "impacts":[
-                                ["complexityAverage", 1]
+                                ["Under 3", 4],
+                                ["Between 3 and 5", 4],
+                                ["Between 5 and 7", 4],
+                                ["Between 7 and 10", 4],
+                                ["Between 10 and 13", -1],
+                                ["Between 13 and 17", -1],
+                                ["18 and Up", -2]
                             ]
                         },
                         {
                             "text": "Medium",
                             "impacts":[
-                                ["complexityAverage", 2]
+                                ["Under 3", 1],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 4],
+                                ["Between 7 and 10", 4],
+                                ["Between 10 and 13", 2],
+                                ["Between 13 and 17", -1],
+                                ["18 and Up", -2]
                             ]
                         },
                         {
                             "text": "Hard",
                             "impacts":[
-                                ["complexityAverage", 4]
+                                ["Under 3", -4],
+                                ["Between 3 and 5", -2],
+                                ["Between 5 and 7", -1],
+                                ["Between 7 and 10", 0],
+                                ["Between 10 and 13", 1],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 3]
                             ]
                         },
                         {
                             "text": "Challenging",
                             "impacts":[
-                                ["complexityAverage", 5]
+                                ["Under 3", -3],
+                                ["Between 3 and 5", -3],
+                                ["Between 5 and 7", -3],
+                                ["Between 7 and 10", -2],
+                                ["Between 10 and 13", -1],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 4]
                             ]
                         }
                     ]
@@ -419,48 +450,67 @@
                         {
                             "text": "Under 30 minutes",
                             "impacts": [
-                                ["maxPlaytime", 30]
+                                ["Under 3", 2],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 1]
                             ]
                         },
                         {
                             "text": "Under an hour",
                             "impacts": [
-                                ["maxPlaytime", 60]
+                                ["Under 3", 1],
+                                ["Between 3 and 5", 1],
+                                ["Between 5 and 7", 1],
+                                ["Between 7 and 10", 2],
+                                ["Between 10 and 13", 2]
                             ]
                         },
                         {
                             "text": "Under 90 minutes",
                             "impacts": [
-                                ["maxPlaytime", 90]
+                                ["Between 7 and 10", 1],
+                                ["Between 10 and 13", 2],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 2]
                             ]
                         },
                         {
                             "text": "2 hours or more",
                             "impacts": [
-                                ["minPlaytime", 120]
+                                ["Between 10 and 13", 1],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 4]
                             ]
                         }
                     ]
                 },
                 {
-                    "text": "Finish the sentece: We want games that are:",
+                    "text": "Finish the sentece: We want games that are",
                     "answers": [
                         {
                             "text": "More random (easier for younger kids)",
                             "impacts": [
-                                ["types", 0]
+                                ["Under 3", 2],
+                                ["Between 3 and 5", 2],
+                                ["Between 5 and 7", 2],
+                                ["Between 7 and 10", 1],
+                                ["Between 10 and 13", 1]
                             ]
                         },
                         {
                             "text": "More strategy-based (easier for older kids)",
                             "impacts": [
-                                ["types", 1]
+                                ["Between 7 and 10", 1],
+                                ["Between 10 and 13", 2],
+                                ["Between 13 and 17", 2],
+                                ["18 and Up", 2]
                             ]
                         },
                         {
                             "text": "More knowledge-based (easier for adults)",
                             "impacts": [
-                                ["types", 2]
+                                ["Between 13 and 17", 2],
+                                ["18 and Up and Up", 2]
                             ]
                         }
                     ]
@@ -469,10 +519,58 @@
             "results": [
                 {
                     "value": 0,
-                    "text": "13",
-                    "info": "A good age range for you and your group is 13. These games have a mix of strategy and randomness, making for an enjoyable experience for everyone",
+                    "text": "Under 3",
+                    "info": "A good age range for your group is 3 and under.",
                     "suggestions": [
-                        ["Modern Art", 118]  
+                        ["Katamino", 6931]  
+                    ]
+                }, 
+                {
+                    "value": 0,
+                    "text": "Between 3 and 5",
+                    "info": "A good age range for your group is from 3-5.",
+                    "suggestions": [
+                        ["Outfoxed!", 172931]  
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Between 5 and 7",
+                    "info": "A good age range for your group is from 5-7.",
+                    "suggestions": [
+                        ["Pete the Pirate", 916]  
+                    ]
+                }, 
+                {
+                    "value": 0,
+                    "text": "Between 7 and 10",
+                    "info": "A good age range for your group is from 7-10.",
+                    "suggestions": [
+                        ["Carcassonne", 822]  
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Between 10 and 13",
+                    "info": "A good age range for your group is from 10-13.",
+                    "suggestions": [
+                        ["Terraforming Mars", 167791]  
+                    ]
+                }, 
+                {
+                    "value": 0,
+                    "text": "Between 13 and 17",
+                    "info": "A good age range for your group is from 13-17.",
+                    "suggestions": [
+                        ["Blood on the Clocktower", 240980]  
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "18 and Up",
+                    "info": "A good age range for your group is 18+.",
+                    "suggestions": [
+                        ["Joking Hazard", 193621]  
                     ]
                 }
             ]

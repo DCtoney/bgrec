@@ -60,7 +60,7 @@ export function createQuizDisplay(quiz: Quiz): HTMLElement {
    quizCard.appendChild(displayQuizMetadata(quiz));
    quizCard.onclick = function() {
       sessionStorage.setItem("quiz", JSON.stringify(quiz));
-      window.location.href = "./quiz.html"
+      window.location.href = "./quizPage.html"
    };
 
    return quizCard;
