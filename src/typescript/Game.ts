@@ -11,6 +11,7 @@ interface Range {
 
 export type InclusionState = "include" | "exclude";
 
+//Used to process games with filters in the search
 export interface GameFilters {
     yearPublished: Range;
     playtime: Range;

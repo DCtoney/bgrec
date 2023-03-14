@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link href="../sass/gameDisplay.scss" rel="stylesheet" type="text/css">
+
+    <!-- Favicon for the website-->
+    <link rel="icon" type="image/x-icon" href="/assets/images/ForageFavicon.png">
+
+    <!-- Preconnect for Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script defer src="../typescript/global/Global.ts" type="module"></script>
+    <script defer src="../typescript/GameDisplay.ts" type="module"></script>
+
+    <!-- Tab title -->
+    <title>Results</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="./search.html">Home</a>
+        <a href="./about.html">About</a>
+        <div id="random">Random</div>
+        <a href="./quizHomePage.html">Quizzes</a>
+        <a href="./profile-login.html">My Account</a>
+        <div>
+            <input type="text" placeholder="Basic Search" />
+            <img src="/assets/images/search.png" id="nav-search" />
+        </div>
+    </nav>
+    <main style="display: flex; flex-direction: column; align-items: center; padding: 5vw;">
+        <div style="display: flex; align-items: center; gap: 3vw;">
+            <img id="box-art"></img>
+            <h1 id="title" style="font-weight: normal; font-size: 7vw;"></h1>
+        </div>
+
+        <div id="stats">
+            <div>
+                <p id="body" title="Global Rank">🏆&nbsp;<span id="glo-rank"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="User Rating">⭐&nbsp;<span id="user-rate"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="Target Age">🧓&nbsp;<span id="p-age"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="Player Count">👤&nbsp;<span id="p-count"></span></p>
+            </div>
+
+            <div>
+                <p id="body" title="Estimated Playtime">🕑&nbsp;<span id="estimated-time"></span></p>
+            </div>
+            <div>
+                <p id="body" title="Year Published">📅&nbsp;<span id="year-pub"></span></p>
+            </div>
+        </div>
+        <p id="description" style="margin-bottom: 3vw;"></p>
+        <div>
+            <p id="body">Mechanics: <span id="mechanics"></span></p>
+        </div>
+        <div>
+            <p id="body">Genres: &nbsp;<span id="genres"></span></p>
+        </div>
+        <p>Data retieved From <a target="_blank" id="reference">Board Game Geek</a></p>
+    </main>
+</body>
+
+</html>
