@@ -1,8 +1,12 @@
-function createCardDisplay(){
-    let container = document.createElement("div");
-    container.classList.add("container");
+import Game, { games, Games } from "./Game";
+import { profileSearch } from "./global/BasicSearch";
 
-    let userTitle = document.createElement("h3");
-    container.appendChild(userTitle);
-    userTitle.innerText = sessionStorage.getItem("username")!;
+$("#logout-button").on("click", _event => {
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("password");
+    window.location.href = "./profile-login.html";
+});
+
+window.onload = () => {
+    document.getElementById('uname')!.innerHTML = sessionStorage.getItem("username")!;
 }
