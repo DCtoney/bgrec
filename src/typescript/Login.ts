@@ -1,7 +1,6 @@
 
 
 $("#submit-button").on("click", _event => {
-    console.log("button clicked!")
     if (document.querySelector<HTMLInputElement>('#uname')!.value && document.querySelector<HTMLInputElement>('#pass')!.value) {
         // I am aware we are storing a user password in plain text in session storage. 
         // I would use OAuth2.0 if this was a real project.

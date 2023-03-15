@@ -1,5 +1,6 @@
 import Game, { games, Games } from "./Game";
 import { profileSearch } from "./global/BasicSearch";
+import Quiz, {Result} from "./Quiz";
 
 
 function createFavsDisplay(fave: Game): HTMLElement{
@@ -27,14 +28,6 @@ function displayGames(favorites: Game[]){
     });
 }
 
-function printArr(list: Game[]){
-    let counter = 0
-    list.forEach(game =>{
-        console.log(counter + ": " + game.name)
-        counter += 1;
-    });
-}
-
 function findFav(searchTerm: String): Game[]{
     let favorites: Game[];
     let placeholder = Games.getGameByID(1);
@@ -44,13 +37,8 @@ function findFav(searchTerm: String): Game[]{
     // if a favs array already exists
     if (sessionStorage.getItem("fav-array")){
         favorites = JSON.parse(sessionStorage.getItem("fav-array")!);
-        console.log("Favorites already in memory");
-        printArr(favorites);
     }
     else favorites = [placeholder];
-    console.log("Favorites not in memory");
-    printArr(favorites);
-
 
     // find best matching game, pulled directly & shamelessly from Results.ts 
     if (!searchTerm) results = filtered.slice(0, 10);
@@ -59,21 +47,11 @@ function findFav(searchTerm: String): Game[]{
 
     // adding best matching game to the favs-array
     if (sessionStorage.getItem("fav-array") == null){
-        console.log("Before splicing: ");
-        printArr(favorites);
         favorites.push(results[0]);
-        console.log("Splice 1: ");
-        printArr(favorites);
         favorites.splice(0, 1);
-        console.log("splice 2: ");
-        printArr(favorites);
     } 
     else{
-        console.log("Else block: ");
-        printArr(favorites);
         favorites.push(results[0]);
-        console.log("Else block after push:");
-        printArr(favorites);
     }
 
     // putting in session storage and returning the array
@@ -116,6 +94,54 @@ function filteredResults(): Game[] {
     }) : games;
 }
 
+function determineProfilePic(username: String){
+    let pic = document.getElementById("pic") as HTMLImageElement;
+    if (username == "Trent"){
+        pic.src="/assets/images/Trent-Real.jpg";
+    } else if (username == "Nick"){
+        pic.src="/assets/images/Nick.jpg";
+    } else if (username == "Brendan"){
+        pic.src="/assets/images/Brendan.jpg";
+    } else if (username == "Dante"){
+        pic.src="/assets/images/Dante.jpg";
+    } else {
+        pic.src ="/assets/images/trent.jpg";
+    }
+}
+
+function displayQuiz(){
+    let containter = document.getElementById("quiz-display") as HTMLElement;
+    let quiz = JSON.parse(sessionStorage.getItem("quiz")!) as Quiz;
+    let result = JSON.parse(sessionStorage.getItem("result")!) as Result;
+
+    containter.innerText = result.info;
+
+    let suggestions = document.createElement("div");
+    suggestions.classList.add("suggestions-container")
+    result.suggestions.forEach(suggestion => {
+        let game = Games.getGameByID(suggestion[1]);
+
+        let suggestionContainer = document.createElement("div");
+        suggestionContainer.classList.add("suggestion");
+
+        let suggestionImage = document.createElement("img");
+        suggestionImage.src = game.imageLink;
+        suggestionContainer.appendChild(suggestionImage);
+
+        let suggestionName = document.createElement("p");
+        suggestionName.innerHTML = suggestion[0];
+        suggestionContainer.appendChild(suggestionName);
+        
+        suggestionContainer.onclick = function() {
+            sessionStorage.setItem("game", JSON.stringify(game));
+            window.location.href = "/src/html/gameDisplay.html";
+        }
+        suggestions.appendChild(suggestionContainer);
+    });
+
+    containter.appendChild(suggestions);
+}
+
 $("#add").on("click", _event => {
     let searchTerm = (document.getElementById('search-term') as HTMLInputElement).value;
     if (searchTerm){
@@ -130,6 +156,7 @@ $("#logout-button").on("click", _event => {
     sessionStorage.removeItem("username");
     sessionStorage.removeItem("password");
     sessionStorage.removeItem("fav-array");
+    sessionStorage.removeItem("bio");
     sessionStorage.removeItem("searchTerm");
     sessionStorage.removeItem("game");
     sessionStorage.removeItem("maximumPlaytime");
@@ -150,14 +177,24 @@ $("#logout-button").on("click", _event => {
     window.location.href = "./profile-login.html";
 });
 
+document.getElementById("bio")!.addEventListener("input", function() {
+    sessionStorage.setItem("bio", document.getElementById("bio")!.innerText);
+});
+
 window.onload = () => {
-    document.getElementById('uname')!.innerHTML = sessionStorage.getItem("username")!;
+    let username = sessionStorage.getItem("username")!;
     let favorites = JSON.parse(sessionStorage.getItem("fav-array")!);
+    let bio = sessionStorage.getItem("bio")!;
+    let description = document.getElementById("bio");
+    determineProfilePic(username);
+    document.getElementById('uname')!.innerHTML = username;
+    displayQuiz();
     if (favorites != null){
-        printArr(favorites);
         displayGames(favorites);
     }
-    else{
-        console.log("could not find fav-array");
+    if (bio != null){
+        description!.innerText = bio
+    } else {
+        description!.innerText = "Tell us about yourself! Click me to edit."
     }
 }
