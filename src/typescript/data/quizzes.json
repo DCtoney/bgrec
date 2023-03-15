@@ -752,6 +752,169 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Find your Time Length",
+            "author": "Nick Iapalucci",
+            "image": "../../assets/images/mechanics_quiz/clock.JPG",
+            "time": 10,
+            "info": "Not sure how much time you like spending playing a game? This quiz will help you figure out the perfect time length games for you.",
+            "questions": [
+                { 
+                    "text": "Which of these do you find most enjoyable?",
+                    "answers": [
+                        {
+                            "text": "Movie",
+                            "impacts": [
+                                ["Extra Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Show Episode",
+                            "impacts": [
+                                ["Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "YouTube Video",
+                            "impacts": [
+                                ["Medium", 1]
+                            ]
+                        },
+                        {
+                            "text": "Vine Clip",
+                            "impacts": [
+                                ["Short", 1]
+                            ]
+                        }
+                    ]
+                },
+                { 
+                    "text": "Which of the following activities do you like best?",
+                    "answers": [
+                        {
+                            "text": "Vacation",
+                            "impacts": [
+                                ["Extra Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Concert",
+                            "impacts": [
+                                ["Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Trip to the grocery store",
+                            "impacts": [
+                                ["Medium", 1]
+                            ]
+                        },
+                        {
+                            "text": "Walk around the block",
+                            "impacts": [
+                                ["Short", 1]
+                            ]
+                        }
+                    ]
+                },
+                { 
+                    "text": "How often do you prefer to switch jobs?",
+                    "answers": [
+                        {
+                            "text": "Never",
+                            "impacts": [
+                                ["Extra Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Rarely",
+                            "impacts": [
+                                ["Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Occasionally",
+                            "impacts": [
+                                ["Medium", 1]
+                            ]
+                        },
+                        {
+                            "text": "Often",
+                            "impacts": [
+                                ["Short", 1]
+                            ]
+                        }
+                    ]
+                },
+                { 
+                    "text": "Which of these food options do you prefer?",
+                    "answers": [
+                        {
+                            "text": "Capital Grille",
+                            "impacts": [
+                                ["Extra Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Olive Garden",
+                            "impacts": [
+                                ["Long", 1]
+                            ]
+                        },
+                        {
+                            "text": "Five Guys",
+                            "impacts": [
+                                ["Medium", 1]
+                            ]
+                        },
+                        {
+                            "text": "McDonalds",
+                            "impacts": [
+                                ["Short", 1]
+                            ]
+                        }
+                    ]
+                }   
+            ],
+            "results": [
+                {
+                    "value": 0,
+                    "text": "Extra Long",
+                    "info": "These games take a while, but you're just the type to love that! Blow hours and hours away with these.",
+                    "suggestions": [
+                        ["Twilight Imperium", 233078],
+                        ["Paths of Glory", 91]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Long",
+                    "info": "These games are a big longer than your average game, but that seems right up your alley.",
+                    "suggestions": [
+                        ["The Castles of Burgundy", 84876],
+                        ["Viticulture Essential Edition", 183394]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Medium",
+                    "info": "These are about your average games. Nothing wrong with being normal!",
+                    "suggestions": [
+                        ["Azul", 230802],
+                        ["Android: Netrunner", 124742]
+                    ]
+                },
+                {
+                    "value": 0,
+                    "text": "Short",
+                    "info": "These games are shorter than usual. If you're in a hurry, these are the ones for you.",
+                    "suggestions": [
+                        ["KLASK", 165722],
+                        ["One Night Ultimate Werewolf", 147949]
+                    ]
+                }
+            ]
         }
     ]
 }
