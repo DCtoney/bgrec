@@ -168,33 +168,34 @@ function displayQuiz(){
     let containter = document.getElementById("quiz-display") as HTMLElement;
     let result = JSON.parse(sessionStorage.getItem("result")!) as Result;
     // set suggestion text to be result description
-    containter.innerText = result.info;
+    if (result != null){
+        containter.innerText = result.info;
 
-    // display suggestions per Forage style, adapted from QuizResults.ts
-    let suggestions = document.createElement("div");
-    suggestions.classList.add("suggestions-container")
-    result.suggestions.forEach(suggestion => {
-        let game = Games.getGameByID(suggestion[1]);
+        // display suggestions per Forage style, adapted from QuizResults.ts
+        let suggestions = document.createElement("div");
+        suggestions.classList.add("suggestions-container")
+        result.suggestions.forEach(suggestion => {
+            let game = Games.getGameByID(suggestion[1]);
 
-        let suggestionContainer = document.createElement("div");
-        suggestionContainer.classList.add("suggestion");
+            let suggestionContainer = document.createElement("div");
+            suggestionContainer.classList.add("suggestion");
 
-        let suggestionImage = document.createElement("img");
-        suggestionImage.src = game.imageLink;
-        suggestionContainer.appendChild(suggestionImage);
+            let suggestionImage = document.createElement("img");
+            suggestionImage.src = game.imageLink;
+            suggestionContainer.appendChild(suggestionImage);
 
-        let suggestionName = document.createElement("p");
-        suggestionName.innerHTML = suggestion[0];
-        suggestionContainer.appendChild(suggestionName);
-        
-        suggestionContainer.onclick = function() {
-            sessionStorage.setItem("game", JSON.stringify(game));
-            window.location.href = "/src/html/gameDisplay.html";
-        }
-        suggestions.appendChild(suggestionContainer);
-    });
-
-    containter.appendChild(suggestions);
+            let suggestionName = document.createElement("p");
+            suggestionName.innerHTML = suggestion[0];
+            suggestionContainer.appendChild(suggestionName);
+            
+            suggestionContainer.onclick = function() {
+                sessionStorage.setItem("game", JSON.stringify(game));
+                window.location.href = "/src/html/gameDisplay.html";
+            }
+            suggestions.appendChild(suggestionContainer);
+        });
+        containter.appendChild(suggestions);
+    }
 }
 
 /**
