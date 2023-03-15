@@ -1,9 +1,12 @@
 
-
+/**
+ * Listener for submit button. Saves username and password to session storage and redirects to account page.
+ * If this were more than a client-side undergrad project, we would use OAuth2.0 or 
+ * a similar secure system to handle account login. 
+ * We are aware that it is not secure to save sensitive user information in plaintext.
+ */
 $("#submit-button").on("click", _event => {
     if (document.querySelector<HTMLInputElement>('#uname')!.value && document.querySelector<HTMLInputElement>('#pass')!.value) {
-        // I am aware we are storing a user password in plain text in session storage. 
-        // I would use OAuth2.0 if this was a real project.
         let username = (document.getElementById('uname') as HTMLInputElement).value;
         let password = (document.getElementById('pass') as HTMLInputElement).value;
         sessionStorage.setItem("username", username);
