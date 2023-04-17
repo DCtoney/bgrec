@@ -10,6 +10,7 @@
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "removeComments": true,
+        "resolveJsonModule": true,
         "strict": true,
         "strictFunctionTypes": true,
         "strictPropertyInitialization": false,
